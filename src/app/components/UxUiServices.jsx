@@ -14,16 +14,22 @@ const breakpoints = {
 };
 
 const Title = styled.div({
-  backgroundColor: '#A100FF',
-  padding: '0.3rem',
-  borderRadius: '0px 70px',
-  color: 'white',
-  margin: 'auto',
   fontSize: '25px',
-  padding: '1rem',
-  textAlign: 'center',
-  marginBottom: '1rem',
+  margin: 'auto',
   fontFamily: '"Keania One", sans-serif',
+  borderColor: '#A100FF',
+  borderWidth: 'thin',
+  color: 'hsl(0 0% 100% / 0)',
+  backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
+  backgroundSize: '30% 100%',
+  backgroundRepeat: 'no-repeat',
+  animation: 'scroll-reveal linear forwards',
+  animationTimeline: 'view()',
+  backgroundClip: 'text',
+  textAlign: 'center',
+  padding: '0.3rem',
+  borderRadius: '0px 100px',
+  marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '40px',
     marginTop: '0rem',
@@ -80,6 +86,9 @@ const ContentTitle = styled.div({
 });
 
 const ContentSubheder = styled.div({
+  color: 'hsl(0 0% 100% / 0)',
+  backgroundImage: 'linear-gradient(90deg, gray, white)',
+  backgroundClip: 'text',
   fontSize: '15px',
   [`@media (min-width: ${breakpoints.md})`]: {
     marginBottom: '1rem',

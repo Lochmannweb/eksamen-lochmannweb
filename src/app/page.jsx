@@ -20,8 +20,8 @@ const Page = () => {
     <Container> 
       <Header />
       <Tech />
-      <Feedback />
       <Projects />
+      <Feedback />
     </Container> 
   )
 }

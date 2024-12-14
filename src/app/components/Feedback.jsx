@@ -16,7 +16,7 @@ const breakpoints = {
       padding: '5rem',
       marginLeft: '24rem',
       marginRight: '24rem',
-      marginTop: '0rem',
+      marginTop: '-5rem',
     },
   });
 
@@ -49,7 +49,7 @@ const breakpoints = {
     backgroundImage: 'linear-gradient(90deg, gray, white)',
     backgroundClip: 'text',
     [`@media (min-width: ${breakpoints.md})`]: {
-      fontSize: '18px',
+      fontSize: '20px',
       marginBottom: '3rem', 
     },
   });

@@ -4,7 +4,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { TechData } from '../data/TechData';
 import "@fontsource/keania-one";
-import { keyframes } from '@emotion/react';
 
 const breakpoints = {
     md: '768px', 
@@ -36,6 +35,12 @@ const Title = styled.div({
   fontFamily: '"Keania One", sans-serif',
   borderColor: '#A100FF',
   borderWidth: 'thin',
+  textAlign: 'center',
+  padding: '0.3rem',
+  borderRadius: '0px 100px',
+  marginBottom: '1rem',
+
+  // scroll animation text
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
   backgroundSize: '30% 100%',
@@ -43,10 +48,6 @@ const Title = styled.div({
   animation: 'scroll-reveal linear forwards',
   animationTimeline: 'view()',
   backgroundClip: 'text',
-  textAlign: 'center',
-  padding: '0.3rem',
-  borderRadius: '0px 100px',
-  marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '40px',
   },
@@ -57,22 +58,11 @@ const Subheader = styled.div({
   fontSize: '15px',
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, gray, white)',
-  // backgroundSize: '50% 100%',
-  // backgroundRepeat: 'no-repeat',
-  // animation: 'scroll-reveal linear forwards',
-  // animationTimeline: 'view()',
-  // animationRange: 'contain',
   backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '20px',
   },
 })
-
-const scrollReveal = keyframes`
-  to {
-    background-size: 100% 100%;
-  }
-`;
 
 
 const Expertise = styled.div({
@@ -115,6 +105,10 @@ const Button = styled.div({
   color: 'black',
   backgroundColor: 'white',
   fontFamily: '"Keania One", sans-serif',
+  ':hover': {
+    backgroundColor: 'black', 
+    color: 'white',
+  },
   [`@media (min-width: ${breakpoints.md})`]: {
     margin: 'auto',
     width: '20%',

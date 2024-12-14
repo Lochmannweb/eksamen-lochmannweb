@@ -45,16 +45,22 @@ const Content = styled.div({
 });
 
 const Title = styled.div({
-  fontSize: '25px',             
-  backgroundColor: '#A100FF',
-  padding: '0.3rem',
-  borderRadius: '0px 70px',
-  color: 'white',
-  fontFamily: '"Keania One", sans-serif',
+  fontSize: '25px',
   margin: 'auto',
+  fontFamily: '"Keania One", sans-serif',
+  borderColor: '#A100FF',
+  borderWidth: 'thin',
+  color: 'hsl(0 0% 100% / 0)',
+  backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
+  backgroundSize: '30% 100%',
+  backgroundRepeat: 'no-repeat',
+  animation: 'scroll-reveal linear forwards',
+  animationTimeline: 'view()',
+  backgroundClip: 'text',
   textAlign: 'center',
-  marginBottom: '2rem',
-  padding: '1rem',
+  padding: '0.3rem',
+  borderRadius: '0px 100px',
+  marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '80%',
     marginBottom: '4rem',
@@ -67,6 +73,9 @@ const Title = styled.div({
 
 const Text = styled.div({
   fontSize: '15px',
+  color: 'hsl(0 0% 100% / 0)',
+  backgroundImage: 'linear-gradient(90deg, gray, white)',
+  backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
 });

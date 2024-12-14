@@ -12,6 +12,7 @@ module.exports = {
     colors: {
       'input': '#0000008e',
       'white': '#fff',
+      'hover-menu': '#A100FF', 
       'menu': '#2524244f0',
       'stagesProces': 'rgba(43, 0, 0, 0.40)',
       'borderImage': 'linear-gradient(130deg, #840000, #FFF, #000, #FFF, #840000) 1',

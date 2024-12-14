@@ -48,7 +48,9 @@ const Content = styled.div({
   fontSize: '15px',
   marginBottom: '3rem',
   textAlign: 'start',
-  color: '#aaa',
+  color: 'hsl(0 0% 100% / 0)',
+  backgroundImage: 'linear-gradient(90deg, gray, white)',
+  backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '15px',
     marginBottom: '3rem',
@@ -56,10 +58,24 @@ const Content = styled.div({
     },
 });
 
+const HighlightedText = styled.span({
+  color: '#A100FF', 
+});
+
 export default function Header() {
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const highlightWords = ["elevate", "your", "website"]; 
+  const subheaderText = ForsideData.subheader.split(" ").map((word, index) => {
+    const cleanWord = word.replace(/[.,!?]/g, ""); 
+    return highlightWords.includes(cleanWord) ? (
+      <HighlightedText key={index}>{word}</HighlightedText>
+    ) : (
+      word
+    );
+  }).reduce((prev, curr) => [prev, ' ', curr]);
 
   return (
     <>
@@ -71,7 +87,7 @@ export default function Header() {
       <img className="-mt-3 -mb-52 md:mb-0 md:-mt-12" src="/header-mobil-bg.png" alt="bg" width={2000} /> 
     )}
     <Container>
-        <HeaderTitle>{ ForsideData.subheader}</HeaderTitle>
+        <HeaderTitle>{subheaderText}</HeaderTitle>
         <Content>{ForsideData.content}</Content>
     </Container>
     </>
