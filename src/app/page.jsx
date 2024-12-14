@@ -1,7 +1,6 @@
 "use client"
 
 import React from 'react'
-import ContactBox from './components/ContactBox'
 import Header from './components/Header'
 import Tech from './components/Tech'
 import styled from '@emotion/styled';
@@ -23,7 +22,6 @@ const Page = () => {
       <Tech />
       <Feedback />
       <Projects />
-      {/* <ContactBox /> */}
     </Container> 
   )
 }

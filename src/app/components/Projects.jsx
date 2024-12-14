@@ -28,12 +28,21 @@ const Title = styled.div({
   fontSize: '25px',
   fontFamily: '"Keania One", sans-serif',
   textAlign: 'center',
-  backgroundColor: '#A100FF',
-  color: 'white',
+  borderColor: '#A100FF',
+  borderWidth: 'thin',
   padding: '0.3rem',
   margin: 'auto',
   marginBottom: '2rem',
   borderRadius: '0px 70px',
+
+  // animation
+  color: 'hsl(0 0% 100% / 0)',
+  backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
+  backgroundSize: '30% 100%',
+  backgroundRepeat: 'no-repeat',
+  animation: 'scroll-reveal linear forwards',
+  animationTimeline: 'view()',
+  backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '40px',
     width: '70%',
@@ -84,8 +93,6 @@ function LatestProjects() {
         <ImageGrid>
           <img src="/foofest-desktop.png" alt="png" width={500} />
           <img src="/cgc-desktop.png" alt="png" width={500} />
-          {/* <img src="/foofest-desktop.png" alt="png" width={500} />
-          <img src="/foofest-desktop.png" alt="png" width={500} /> */}
         </ImageGrid>
         <Button>
           <a href="/MyWork">{RecentWorkData.button}</a>

@@ -21,13 +21,21 @@ const breakpoints = {
   });
 
   const Title = styled.div({
-    color: 'white',
     fontSize: '25px',
     fontFamily: '"Keania One", sans-serif',
-    backgroundColor: '#A100FF',
+    borderColor: '#A100FF',
+    borderWidth: 'thin',
+    color: 'hsl(0 0% 100% / 0)',
+    backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
+    backgroundSize: '30% 100%',
+    backgroundRepeat: 'no-repeat',
+    animation: 'scroll-reveal linear forwards',
+    animationTimeline: 'view()',
+    backgroundClip: 'text',
+    textAlign: 'center',
     padding: '0.3rem',
+    borderRadius: '0px 100px',
     marginBottom: '1rem',
-    borderRadius: '0px 70px',
     [`@media (min-width: ${breakpoints.md})`]: {
       fontSize: '40px',
       marginTop: '0rem',
@@ -35,9 +43,11 @@ const breakpoints = {
   });
 
   const Subheader = styled.div({
-    color: 'white',
-    fontSize: '15px',
-    color: 'white',
+    textAlign: 'center',  
+    fontSize: '18px',
+    color: 'hsl(0 0% 100% / 0)',
+    backgroundImage: 'linear-gradient(90deg, gray, white)',
+    backgroundClip: 'text',
     [`@media (min-width: ${breakpoints.md})`]: {
       fontSize: '18px',
       marginBottom: '3rem', 
@@ -64,10 +74,23 @@ const breakpoints = {
   });
 
   const FeedBackContentTtitle = styled.div({
+    color: 'hsl(0 0% 100% / 0)',
+    backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
+    backgroundSize: '50% 100%',
+    backgroundRepeat: 'no-repeat',
+    animation: 'scroll-reveal linear forwards',
+    animationTimeline: 'view()',
+    backgroundClip: 'text',
     fontFamily: '"Keania One", sans-serif',
     [`@media (min-width: ${breakpoints.md})`]: {
     },
   });
+
+  const AniContent = styled.div({
+     backgroundImage: 'linear-gradient(90deg,  white, #A100FF)',
+     backgroundClip: 'text',
+     color: 'hsl(0 0% 100% / 0)',
+  })
 
 function Feedback() {
 
@@ -82,19 +105,19 @@ function Feedback() {
           <FeedBackContent>
             <img className='m-auto' src="/settings.svg" alt="svg" width={50} />
             <FeedBackContentTtitle className=' md:text-xl md:mt-5'>{FeedbackData.Tech.title}</FeedBackContentTtitle> 
-            <p className='text-sm mt-2'>{FeedbackData.Tech.feedback}</p>
+            <AniContent className='text-sm mt-2'>{FeedbackData.Tech.feedback}</AniContent>
           </FeedBackContent>
 
           <FeedBackContent>
             <img className='m-auto' src="/chat_1.svg" alt="svg" width={50} />
             <FeedBackContentTtitle className=' md:text-xl md:mt-5'>{FeedbackData.Feedback.title}</FeedBackContentTtitle>
-            <p className='text-sm mt-2'>{FeedbackData.Feedback.feedback}</p>
+            <AniContent  className='text-sm mt-2'>{FeedbackData.Feedback.feedback}</AniContent>
           </FeedBackContent>
 
           <FeedBackContent>
             <img className='m-auto' src="/lowest-price.svg" alt="svg" width={50} />
             <FeedBackContentTtitle className=' md:text-xl md:mt-5'>{FeedbackData.Offer.title}</FeedBackContentTtitle>
-            <p className='text-sm mt-2'>{FeedbackData.Offer.feedback}</p>
+            <AniContent className='text-sm mt-2'>{FeedbackData.Offer.feedback}</AniContent>
           </FeedBackContent>
         </Content>
       </Container>

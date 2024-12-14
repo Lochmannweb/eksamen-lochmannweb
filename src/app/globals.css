@@ -8,39 +8,9 @@ body {
   color: white;
 }
 
-/* TextAnimation.css */
-.text-container {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  font-size: 2rem;
-  position: relative;
-}
-
-.animated-text {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out; 
-}
-
-.animated-text {
-  opacity: 1;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+@keyframes scroll-reveal {
   to {
-    opacity: 1;
+    background-size: 100% 100%;
   }
 }
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 

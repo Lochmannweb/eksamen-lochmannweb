@@ -4,6 +4,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { TechData } from '../data/TechData';
 import "@fontsource/keania-one";
+import { keyframes } from '@emotion/react';
 
 const breakpoints = {
     md: '768px', 
@@ -26,18 +27,25 @@ const HeaderContent = styled.div({
     alignContent: 'center',
     padding: '4rem',
     width: '60%',
-    marginTop: '-10rem',
+    marginTop: '-11rem',
   },
 })
 
 const Title = styled.div({
   fontSize: '25px',
   fontFamily: '"Keania One", sans-serif',
-  backgroundColor: '#A100FF',
-  color: 'white',
+  borderColor: '#A100FF',
+  borderWidth: 'thin',
+  color: 'hsl(0 0% 100% / 0)',
+  backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
+  backgroundSize: '30% 100%',
+  backgroundRepeat: 'no-repeat',
+  animation: 'scroll-reveal linear forwards',
+  animationTimeline: 'view()',
+  backgroundClip: 'text',
   textAlign: 'center',
   padding: '0.3rem',
-  borderRadius: '0px 70px',
+  borderRadius: '0px 100px',
   marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '40px',
@@ -45,11 +53,27 @@ const Title = styled.div({
 });
 
 const Subheader = styled.div({
-  color: 'white',
-  textAlign: 'center',
+  textAlign: 'center',  
+  fontSize: '15px',
+  color: 'hsl(0 0% 100% / 0)',
+  backgroundImage: 'linear-gradient(90deg, gray, white)',
+  // backgroundSize: '50% 100%',
+  // backgroundRepeat: 'no-repeat',
+  // animation: 'scroll-reveal linear forwards',
+  // animationTimeline: 'view()',
+  // animationRange: 'contain',
+  backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '20px',
   },
 })
+
+const scrollReveal = keyframes`
+  to {
+    background-size: 100% 100%;
+  }
+`;
+
 
 const Expertise = styled.div({
   display: 'grid',
@@ -114,8 +138,8 @@ function App() {
       <HeaderContent>
         <Title>{TechData.title}</Title>
         <Subheader>
-          <p>{TechData.subheader}</p>
-          <p>{TechData.subheader2}</p>
+          <span>{TechData.subheader}</span> <br />
+          <span>{TechData.subheader2}</span>
         </Subheader>
       </HeaderContent>
       <Expertise>
