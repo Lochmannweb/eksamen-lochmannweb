@@ -1,0 +1,84 @@
+/* Header.css */
+
+.header-container {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.header-title {
+  font-family: fantasy;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+.header-animated-text {
+  font-family: auto;
+  font-weight: bold;
+  font-size: 5rem;
+  animation: fade 3s infinite;
+}
+
+.header-link {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border-width: thin;
+  border-color: white;
+  text-align: center;
+  display: flex;
+  width: 20%;
+  margin: auto;
+  margin-top: 2rem;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Responsiv styling med medieforespørgsler */
+@media (max-width: 1024px) {
+  .header-container {
+    padding-top: 4rem;
+  }
+
+  .header-title {
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+  .header-animated-text {
+    font-size: 3.5rem;
+  }
+
+  .header-link {
+    padding: 8px 16px;
+    width: 30%;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    padding-top: 3rem;
+  }
+
+  .header-title {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .header-animated-text {
+    font-size: 2rem;
+  }
+
+  .header-link {
+    padding: 0.3rem;
+    width: 40%;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
