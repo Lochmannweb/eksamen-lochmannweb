@@ -10,13 +10,15 @@ const breakpoints = {
 };
 
 const Content = styled.div({
-  fontSize: '12px',
+  fontSize: '15px',
   display: 'grid',
   gap: '0rem',
-  color: '#aaa',
   textAlign: 'center',
   marginTop: '-5rem',
   paddingBottom: '5rem',
+  color: 'hsl(0 0% 100% / 0)',
+  backgroundImage: 'linear-gradient(90deg, gray, white)',
+  backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
     paddingLeft: '10rem',
     paddingRight: '10rem',
@@ -36,8 +38,8 @@ const Aboutpage = () => {
   return (
     <>
       <Content>
-        {MyWorkHeader.content1}
-        {MyWorkHeader.content2}
+        {MyWorkHeader.content1} <br /> <br />
+        {MyWorkHeader.content2} <br /> <br />
         {MyWorkHeader.content3}
       </Content>
     </>

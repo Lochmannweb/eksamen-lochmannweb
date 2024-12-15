@@ -45,11 +45,16 @@ const Content = styled.div({
 });
 
 const Title = styled.div({
-  fontSize: '25px',
+  fontSize: '30px',
   margin: 'auto',
   fontFamily: '"Keania One", sans-serif',
-  borderColor: '#A100FF',
+  borderBottomColor: '#A100FF',
   borderWidth: 'thin',
+  textAlign: 'start',
+  borderRadius: '0px',
+  marginBottom: '1rem',
+
+  // scroll animation text
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
   backgroundSize: '30% 100%',
@@ -57,13 +62,12 @@ const Title = styled.div({
   animation: 'scroll-reveal linear forwards',
   animationTimeline: 'view()',
   backgroundClip: 'text',
-  textAlign: 'center',
-  padding: '0.3rem',
-  borderRadius: '0px 100px',
-  marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '80%',
+    textAlign: 'center',
     marginBottom: '4rem',
+    borderColor: '#A100FF',
+    borderRadius: '0px 100px',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '40px',

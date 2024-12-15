@@ -18,10 +18,10 @@ const Page = () => {
 
   return (
     <Container> 
-      <Header />
-      <Tech />
-      <Projects />
-      <Feedback />
+      <Header/>
+      <Tech/>
+      <Projects/>
+      <Feedback/>
     </Container> 
   )
 }

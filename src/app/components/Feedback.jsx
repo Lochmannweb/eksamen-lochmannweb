@@ -11,44 +11,49 @@ const breakpoints = {
   const Container = styled.div({
     padding: '2rem',
     textAlign: 'center',
-    marginTop: '3rem',
+    marginTop: '8rem',
     [`@media (min-width: ${breakpoints.lg})`]: {
       padding: '5rem',
       marginLeft: '24rem',
       marginRight: '24rem',
-      marginTop: '-5rem',
+      marginTop: '5rem',
     },
   });
 
   const Title = styled.div({
-    fontSize: '25px',
+    fontSize: '30px',
     fontFamily: '"Keania One", sans-serif',
-    borderColor: '#A100FF',
+    borderBottomColor: '#A100FF',
     borderWidth: 'thin',
+    textAlign: 'start',
+    borderRadius: '0px',
+    marginBottom: '1rem',
+
+    // Scroll text animation
     color: 'hsl(0 0% 100% / 0)',
     backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
-    backgroundSize: '30% 100%',
+    backgroundSize: '50% 100%',
     backgroundRepeat: 'no-repeat',
     animation: 'scroll-reveal linear forwards',
     animationTimeline: 'view()',
     backgroundClip: 'text',
-    textAlign: 'center',
-    padding: '0.3rem',
-    borderRadius: '0px 100px',
-    marginBottom: '1rem',
     [`@media (min-width: ${breakpoints.md})`]: {
+      textAlign: 'center',
+      borderColor: '#A100FF',
+      borderRadius: '0px 100px',
       fontSize: '40px',
       marginTop: '0rem',
     },
   });
 
   const Subheader = styled.div({
-    textAlign: 'center',  
+    textAlign: 'start',  
     fontSize: '18px',
     color: 'hsl(0 0% 100% / 0)',
     backgroundImage: 'linear-gradient(90deg, gray, white)',
     backgroundClip: 'text',
     [`@media (min-width: ${breakpoints.md})`]: {
+      textAlign: 'center',  
       fontSize: '20px',
       marginBottom: '3rem', 
     },
@@ -82,6 +87,8 @@ const breakpoints = {
     animationTimeline: 'view()',
     backgroundClip: 'text',
     fontFamily: '"Keania One", sans-serif',
+    textAlign: 'center',  
+    fontSize: '20px',
     [`@media (min-width: ${breakpoints.md})`]: {
     },
   });

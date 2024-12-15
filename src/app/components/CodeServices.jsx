@@ -14,23 +14,28 @@ const breakpoints = {
 };
 
 const Title = styled.div({
-  fontSize: '25px',
+  fontSize: '30px',
   margin: 'auto',
   fontFamily: '"Keania One", sans-serif',
-  borderColor: '#A100FF',
+  borderBottomColor: '#A100FF',
   borderWidth: 'thin',
+  textAlign: 'start',
+  borderRadius: '0px',
+  marginBottom: '1rem',
+  marginTop: '5rem',
+
+  // scroll animation text
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
-  backgroundSize: '30% 100%',
+  backgroundSize: '50% 100%',
   backgroundRepeat: 'no-repeat',
   animation: 'scroll-reveal linear forwards',
   animationTimeline: 'view()',
   backgroundClip: 'text',
-  textAlign: 'center',
-  padding: '0.3rem',
-  borderRadius: '0px 100px',
-  marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
+    borderColor: '#A100FF',
+    textAlign: 'center',
+    borderRadius: '0px 100px',
    fontSize: '40px',
    marginTop: '0rem',
    width: '80%',
@@ -97,7 +102,7 @@ const MyStory = () => {
     <Title>{ServicesData.Kode.title}</Title>
     <Container>
       <Content>
-        <ContentSubheder>{ServicesData.Kode.content}</ContentSubheder>
+        <ContentSubheder>{ServicesData.Kode.content}</ContentSubheder> <br />
         <li className='md:text-base'>{ServicesData.Kode.services1}</li>
         <li className='md:text-base'>{ServicesData.Kode.services2}</li>
         <li className='md:text-base'>{ServicesData.Kode.services3}</li>

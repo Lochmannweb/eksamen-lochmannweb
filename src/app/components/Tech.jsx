@@ -12,7 +12,7 @@ const breakpoints = {
 
 const Container = styled.div({
   display: 'grid',
-  marginTop: '18rem',
+  marginTop: '15rem',
     [`@media (min-width: ${breakpoints.md})`]: {
       marginTop: '16rem',
       },
@@ -31,30 +31,33 @@ const HeaderContent = styled.div({
 })
 
 const Title = styled.div({
-  fontSize: '25px',
+  fontSize: '30px',
   fontFamily: '"Keania One", sans-serif',
-  borderColor: '#A100FF',
-  borderWidth: 'thin',
-  textAlign: 'center',
+  borderBottomColor: '#A100FF',
+  borderWidth: 'thin', 
+  textAlign: 'start',
   padding: '0.3rem',
-  borderRadius: '0px 100px',
+  borderRadius: '0px',
   marginBottom: '1rem',
 
   // scroll animation text
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
-  backgroundSize: '30% 100%',
+  backgroundSize: '50% 100%',
   backgroundRepeat: 'no-repeat',
   animation: 'scroll-reveal linear forwards',
   animationTimeline: 'view()',
   backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
+    textAlign: 'center',
+    borderRadius: '0px 70px',
+    borderColor: '#A100FF',
     fontSize: '40px',
   },
 });
 
 const Subheader = styled.div({
-  textAlign: 'center',  
+  textAlign: 'start',  
   fontSize: '15px',
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, gray, white)',
@@ -94,25 +97,25 @@ const ExpertiseContentText = styled.div({
 })
 
 const Button = styled.div({
-  padding: '0.3rem',
+  padding: '0.5rem',
   borderRadius: '20px',
   textAlign: 'center',
-  width: '40%',
-  borderWidth: 'thin',
-  fontSize: '13px',
+  fontSize: '15px',
   marginTop: '1rem',
+  width: '80%',
   margin: 'auto',
-  color: 'black',
-  backgroundColor: 'white',
+  color: 'white',
+  filter: 'drop-shadow(0 0 0.75rem #A100FF)',
+  backgroundImage: 'linear-gradient(90deg, black, #A100FF)',
   fontFamily: '"Keania One", sans-serif',
   ':hover': {
-    backgroundColor: 'black', 
-    color: 'white',
+    backgroundImage: 'linear-gradient(180deg, black, #A100FF)',
   },
   [`@media (min-width: ${breakpoints.md})`]: {
     margin: 'auto',
     width: '20%',
     marginBottom: '8rem',
+    width: '40%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     width: '10%',

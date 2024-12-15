@@ -12,7 +12,7 @@ export const ServicesData = {
         services5: "Spline",
     },
     Kode: {
-        title: "Code",
+        title: "Frontend Development",
         content: "I build modern web technologies, leveraging React-based frameworks like Next.js to ensure fast server-side rendering and optimal SEO. CSS is minimalist and responsive, often implemented through frameworks like Tailwind or custom styling.",
         services1: "React",
         services2: "JavaScript",

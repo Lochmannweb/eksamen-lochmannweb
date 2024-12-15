@@ -12,6 +12,8 @@ module.exports = {
     colors: {
       'input': '#0000008e',
       'white': '#fff',
+      'black': '#000',
+      'gray': '#aaa',
       'hover-menu': '#A100FF', 
       'menu': '#2524244f0',
       'stagesProces': 'rgba(43, 0, 0, 0.40)',
@@ -23,9 +25,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'contact-switch': "url('/kontakt-knap-switch.png')",
       },
     },
   },

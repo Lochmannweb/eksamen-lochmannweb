@@ -20,11 +20,16 @@ const Container = styled.div({
 });
 
 const Title = styled.div({
-  fontSize: '25px',
+  fontSize: '30px',
   margin: 'auto',
   fontFamily: '"Keania One", sans-serif',
-  borderColor: '#A100FF',
+  borderBottomColor: '#A100FF',
   borderWidth: 'thin',
+  textAlign: 'start',
+  borderRadius: '0px',
+  marginBottom: '1rem',
+
+  // scroll animation text
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
   backgroundSize: '30% 100%',
@@ -32,36 +37,31 @@ const Title = styled.div({
   animation: 'scroll-reveal linear forwards',
   animationTimeline: 'view()',
   backgroundClip: 'text',
-  textAlign: 'center',
-  padding: '0.3rem',
-  borderRadius: '0px 100px',
-  marginBottom: '1rem',
     [`@media (min-width: ${breakpoints.md})`]: {
-        fontSize: '35px',
-        width: '65%',
-        padding: '2rem',
-        marginBottom: '-3rem',
+      borderRadius: '0px 100px',
+      borderColor: '#A100FF',
+      textAlign: 'center',
+      width: '65%',
+      padding: '2rem',
+      marginBottom: '-3rem',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
-        width: '45%',
+      width: '45%',
       },
 });
 
 const Content = styled.div({
     fontSize: '15px',
-    padding: '2rem',
-    textAlign: 'center',
-    margin: 'auto',
+    textAlign: 'start',
     width: '90%',
     marginTop: '-1rem',
     color: 'hsl(0 0% 100% / 0)',
     backgroundImage: 'linear-gradient(90deg, gray, white)',
     backgroundClip: 'text',
     [`@media (min-width: ${breakpoints.md})`]: {
-        fontSize: '20px',
-        width: '70%',
-        padding: '4rem',
-        // marginTop: '-2rem',
+      textAlign: 'center',
+      fontSize: '20px',
+      width: '70%',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
         width: '50%',
@@ -69,21 +69,23 @@ const Content = styled.div({
   });
 
 const Button = styled.div({
-    borderRadius: '50px',
-    width: '50%',
-    padding: '0.3rem',
-    margin: 'auto',
-    marginTop: '3rem',
-    marginBottom: '3rem',
-    textAlign: 'center',
-    fontFamily: '"Keania One", sans-serif',
-    backgroundColor: 'white',
-    color: 'black',
+  padding: '0.5rem',
+  marginTop: '3rem',
+  borderRadius: '20px',
+  textAlign: 'center',
+  fontSize: '15px',
+  color: 'white',
+  filter: 'drop-shadow(0 0 0.75rem #A100FF)',
+  backgroundImage: 'linear-gradient(90deg, black, #A100FF)',
+  fontFamily: '"Keania One", sans-serif',
+  ':hover': {
+    backgroundImage: 'linear-gradient(180deg, black, #A100FF)',
+  },
     [`@media (min-width: ${breakpoints.md})`]: {
         width: '25%',
         padding: '0.5rem',
         fontSize: '15px',
-        marginTop: '0rem',
+        width: '50%',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
         width: '12%',

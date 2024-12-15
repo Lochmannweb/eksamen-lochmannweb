@@ -16,7 +16,7 @@ function ContactForm() {
       return <p className='font-keania md:text-2xl m-auto md:r-44 md:mt-48'>Looking forward to work with you!</p>;
   }
   return (
-    <form className='grid gap-4 lg:mt-20' onSubmit={handleSubmit}>
+    <form className='grid -mt-10 gap-4 lg:mt-20' onSubmit={handleSubmit}>
 
       <div className='grid'>
         <label htmlFor="text" className='font-keania'>
@@ -26,7 +26,7 @@ function ContactForm() {
           id="text"
           type="text" 
           name="text"
-          className='bg-input text-white text-xs p-2'
+          className='bg-input border-2 border-gray text-white text-xs p-2'
           placeholder='If the website exist'
         />
         <ValidationError 
@@ -44,7 +44,7 @@ function ContactForm() {
           id="text"
           type="text" 
           name="text"
-          className='bg-input text-white text-xs p-2'
+          className='bg-input border-2 border-gray text-white text-xs p-2'
           placeholder='John James'
         />
         <ValidationError 
@@ -62,7 +62,7 @@ function ContactForm() {
           id="tel"
           type="tel" 
           name="tel"
-          className='bg-input text-white text-xs p-2'
+          className='bg-input border-2 border-gray text-white text-xs p-2'
           placeholder='+XX XX XX XX XX'
         />
         <ValidationError 
@@ -80,7 +80,7 @@ function ContactForm() {
           id="email"
           type="email" 
           name="email"
-          className='bg-input text-white text-xs p-2'
+          className='bg-input border-2 border-gray text-white text-xs p-2'
           placeholder='example@example.com'
         />
         <ValidationError 
@@ -97,7 +97,7 @@ function ContactForm() {
         <textarea
           id="message"
           name="message"
-          className='bg-input text-white text-xs p-2'
+          className='bg-input border-2 border-gray text-white text-xs p-2'
         />
         <ValidationError 
           prefix="Message" 
@@ -106,9 +106,9 @@ function ContactForm() {
         />
       </div>
 
-      <div>
-        <button type="submit" className='font-keania' disabled={state.submitting}>
-          Submit
+      <div className='m-auto'>
+        <button type="submit" className='font-keania bg-white text-black p-2 px-20 mt-3' disabled={state.submitting}>
+          Send
         </button>
       </div>
     </form>

@@ -145,9 +145,9 @@ function App() {
             <LinksContainer>
                 <ul>
                   <Links>
-                    <a className='text-base md:text-lg hover:text-hover-menu' href="/About" prefetch={false}>Journey & Expertise</a>
+                    <a className='text-base md:text-lg hover:text-hover-menu' href="/About" prefetch={false}>Journey & Services</a>
                     <a className='text-base md:text-lg hover:text-hover-menu' href="/MyWork" prefetch={false}>Proces & Projects</a>
-                    <a href="/Contact" prefetch={false}><Image src="/kontakt-knap.png" alt="knap" width={150} height={50} /></a>
+                    <a className='bg-white px-5 text-black text-base rounded-tr-xl rounded-bl-xl hover:bg-hover-menu hover:text-white md:text-lg' href="/Contact" prefetch={false}>Contact</a>
                   </Links>
                 </ul>
             </LinksContainer>
@@ -171,7 +171,7 @@ function App() {
                 />
               </div>
             )}
-              <a className='font-mono hover:text-hover-menu' href="/" prefetch={false}>LOCHMANNWEB</a>
+              <a className='font-keania hover:text-hover-menu' href="/" prefetch={false}>LOCHMANNWEB</a>
             </div>
   
             <div className='flex items-center'>
@@ -191,10 +191,10 @@ function App() {
             <LinksContainer>
                 <ul>
                   <Links>
-                    <a className='text-sm md:text-lg hover:text-hover-menu' href="/About" prefetch={false}>Journey & Expertise</a>
-                    <a className='text-sm md:text-lg hover:text-hover-menu' href="/MyWork" prefetch={false}>Proces & projects</a>
-                    <a className='text-sm md:text-lg hover:text-hover-menu' href="/Contact" prefetch={false}>Contact</a>
-                    <a className='text-sm md:text-lg hover:text-hover-menu' href="https://www.instagram.com/lochmannweb" prefetch={false}>Instagram</a>
+                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/About" prefetch={false}>Journey & Services</a>
+                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/MyWork" prefetch={false}>Proces & projects</a>
+                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/Contact" prefetch={false}>Contact</a>
+                    <a className='text-lg md:text-lg hover:text-hover-menu' href="https://www.instagram.com/lochmannweb" prefetch={false}>Instagram</a>
                   </Links>
                 </ul>
             </LinksContainer>
@@ -211,7 +211,7 @@ function App() {
                   />
                 </div>
               )}
-              <a className='font-mono' href="/" prefetch={false}>LOCHMANNWEB</a>
+              <a className='font-keania' href="/" prefetch={false}>LOCHMANNWEB</a>
             </div>
 
                 <div>

@@ -11,71 +11,84 @@ const breakpoints = {
 };
 
 const Container = styled.div({
+  fontSize: '20px',
   display: 'grid',
-  position: 'absolute',
-  paddingTop: '4rem',
-  textAlign: 'start',
-  padding: '2rem',
+  margin: 'auto',
+  marginTop: '-27rem',
+  padding: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    paddingLeft: '15rem',
-    paddingTop: '10rem',
+    marginTop: '-30rem',
     textAlign: 'center',
+    marginTop: '10rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    paddingLeft: '23rem',
-    paddingTop: '12rem',
-    textAlign: 'center',
+    marginTop: '-32rem',
   },
 });
 
 const HeaderTitle = styled.div({
   fontFamily: '"Keania One", sans-serif',
-  fontSize: '40px',
-  margin: 'auto',
-  marginTop: '-3rem',
-  lineHeight: '3rem',
+  fontSize: '45px',
+  lineHeight: '3.5rem',
+  backgroundImage: 'linear-gradient(90deg, #fff, #A100FF)',
+  WebkitBackgroundClip: 'text',
+  color: 'transparent',
+  backgroundClip: 'text',
+  marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
+    lineHeight: '0rem',
+    marginBottom: '0rem',
     fontSize: '30px',
-    marginTop: '0rem',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '59px',
-    lineHeight: '4.5rem',
+    },
+});
+
+const ContentContainer = styled.div({
+  display: 'grid',
+  gap: '1rem',
+  [`@media (min-width: ${breakpoints.md})`]: {
     },
 });
 
 const Content = styled.div({
   fontSize: '15px',
-  marginBottom: '3rem',
+  borderWidth: 'thin',
+  borderColor: '#A100FF',
+  borderRadius: '25px',
+  padding: '0.5rem',
+  // color: 'gray',
   textAlign: 'start',
   color: 'hsl(0 0% 100% / 0)',
-  backgroundImage: 'linear-gradient(90deg, gray, white)',
+  backgroundImage: 'linear-gradient(90deg, white, gray)',
   backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '15px',
-    marginBottom: '3rem',
-    textAlign: 'center',
+    fontSize: '20px',
     },
 });
 
-const HighlightedText = styled.span({
-  color: '#A100FF', 
-});
+// const HighlightedText = styled.span({ 
+//   backgroundImage: 'linear-gradient(90deg, #fff, #A100FF)',
+//   WebkitBackgroundClip: 'text',
+//   color: 'transparent',
+//   backgroundClip: 'text',
+// });
 
 export default function Header() {
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  const highlightWords = ["elevate", "your", "website"]; 
-  const subheaderText = ForsideData.subheader.split(" ").map((word, index) => {
-    const cleanWord = word.replace(/[.,!?]/g, ""); 
-    return highlightWords.includes(cleanWord) ? (
-      <HighlightedText key={index}>{word}</HighlightedText>
-    ) : (
-      word
-    );
-  }).reduce((prev, curr) => [prev, ' ', curr]);
+  // const highlightWords = ["elevate", "your", "website"]; 
+  // const subheaderText = ForsideData.subheader.split(" ").map((word, index) => {
+  //   const cleanWord = word.replace(/[.,!?]/g, ""); 
+  //   return highlightWords.includes(cleanWord) ? (
+  //     <HighlightedText key={index}>{word}</HighlightedText>
+  //   ) : (
+  //     word
+  //   );
+  // }).reduce((prev, curr) => [prev, ' ', curr]);
 
   return (
     <>
@@ -84,11 +97,15 @@ export default function Header() {
     )}
 
     {(isTablet && 
-      <img className="-mt-3 -mb-52 md:mb-0 md:-mt-12" src="/header-mobil-bg.png" alt="bg" width={2000} /> 
+      <img className="-mt-12 -mb-52 md:mb-0 md:mt-12" src="/header-mobil-bg.png" alt="mobil" width={2000} /> 
     )}
     <Container>
-        <HeaderTitle>{subheaderText}</HeaderTitle>
-        <Content>{ForsideData.content}</Content>
+        <HeaderTitle>{ForsideData.subheader}</HeaderTitle>
+        <ContentContainer>
+          <Content>{ForsideData.content}</Content>
+          <Content>{ForsideData.content2}</Content>
+          <Content>{ForsideData.content3}</Content>
+        </ContentContainer>
     </Container>
     </>
   );
