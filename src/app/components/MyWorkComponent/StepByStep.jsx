@@ -32,17 +32,18 @@ const Title = styled.div({
   // scroll animation text
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
-  backgroundSize: '30% 100%',
+  backgroundSize: '50% 100%',
   backgroundRepeat: 'no-repeat',
   animation: 'scroll-reveal linear forwards',
   animationTimeline: 'view()',
   backgroundClip: 'text',
     [`@media (min-width: ${breakpoints.md})`]: {
+      fontSize: '35px',
       borderRadius: '0px 100px',
       borderColor: '#A100FF',
       textAlign: 'center',
-      width: '65%',
-      padding: '2rem',
+      width: '90%',
+      padding: '1rem',
       marginBottom: '-3rem',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
@@ -59,9 +60,12 @@ const Content = styled.div({
     backgroundImage: 'linear-gradient(90deg, gray, white)',
     backgroundClip: 'text',
     [`@media (min-width: ${breakpoints.md})`]: {
+      margin: 'auto',
+      marginTop: '4rem',
       textAlign: 'center',
       fontSize: '20px',
       width: '70%',
+      marginBottom: '2rem',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
         width: '50%',
@@ -82,14 +86,16 @@ const Button = styled.div({
     backgroundImage: 'linear-gradient(180deg, black, #A100FF)',
   },
     [`@media (min-width: ${breakpoints.md})`]: {
-        width: '25%',
-        padding: '0.5rem',
-        fontSize: '15px',
-        width: '50%',
+      margin: 'auto',
+      marginTop: '3rem',
+      width: '25%',
+      padding: '0.5rem',
+      fontSize: '15px',
+      width: '50%',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
-        width: '12%',
-        fontSize: '20px',
+      width: '15%',
+      fontSize: '20px',
       },
   });
 

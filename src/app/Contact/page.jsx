@@ -28,21 +28,15 @@ const Container = styled.div({
     },
   });
 
-  const IMG = styled.div({
-
-  });
-
-
-
 function ContactForm() {
     const theme = useTheme();
-    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <>
     {(!isMobile && 
-      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/Header-bg.png" alt="bg" width={2000} /> 
+      <img className="mt-56 -mb-52 md:-mb-28 md:-mt-12" src="/header-contact-dbg.png" alt="bg" width={2000} /> 
     )}
 
     {(isTablet && 

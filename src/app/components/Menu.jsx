@@ -28,7 +28,7 @@ const Container = styled.div({
   bottom: '0',
   fontFamily: '"Keania One", sans-serif',
   borderTopColor: '#A100FF',
-  borderBottomColor: 'black',
+  borderBottomColor: 'transparent',
   borderLeftColor: 'black',
   borderRightColor: 'black',
   borderWidth: 'thin',
@@ -114,8 +114,8 @@ const LinksContainer = styled.div({
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const theme = useTheme();
-  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

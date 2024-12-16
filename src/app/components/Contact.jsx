@@ -106,7 +106,7 @@ function ContactForm() {
         />
       </div>
 
-      <div className='m-auto'>
+      <div className='m-auto lg:m-0'>
         <button type="submit" className='font-keania bg-white text-black p-2 px-20 mt-3' disabled={state.submitting}>
           Send
         </button>

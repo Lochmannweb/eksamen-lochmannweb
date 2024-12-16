@@ -12,6 +12,9 @@ const breakpoints = {
     padding: '2rem',
     textAlign: 'center',
     marginTop: '8rem',
+    [`@media (min-width: ${breakpoints.md})`]: {
+      padding: '4rem',
+    },
     [`@media (min-width: ${breakpoints.lg})`]: {
       padding: '5rem',
       marginLeft: '24rem',
@@ -65,6 +68,9 @@ const breakpoints = {
     gap: '3rem',
     marginTop: '3rem',
     [`@media (min-width: ${breakpoints.md})`]: {
+      justifySelf: 'center',
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
       display: 'flex',
       justifyContent: 'center',
       gap: '10rem',
@@ -94,9 +100,13 @@ const breakpoints = {
   });
 
   const AniContent = styled.div({
+    fontSize: '15px',
      backgroundImage: 'linear-gradient(90deg,  white, #A100FF)',
      backgroundClip: 'text',
      color: 'hsl(0 0% 100% / 0)',
+     [`@media (min-width: ${breakpoints.md})`]: {
+      fontSize: '15px',
+    },
   })
 
 function Feedback() {

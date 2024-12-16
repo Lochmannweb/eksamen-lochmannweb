@@ -37,7 +37,7 @@ const Title = styled.div({
     textAlign: 'center',
     borderRadius: '0px 100px',
    fontSize: '40px',
-   marginTop: '0rem',
+   marginTop: '4rem',
    width: '80%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -110,6 +110,7 @@ const MyStory = () => {
         <li className='md:text-base'>{ServicesData.Kode.services5}</li>
         <li className='md:text-base'>{ServicesData.Kode.services6}</li>
         <li className='md:text-base'>{ServicesData.Kode.services7}</li>
+        <li className='md:text-base'>{ServicesData.Kode.services8}</li>
       </Content>
       <ImageContainer>
         {/* <Image className='m-auto' src="/uxuidesign.png" alt="img" srcset="" width={300} height={300} /> */}

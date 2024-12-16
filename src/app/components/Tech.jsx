@@ -14,7 +14,7 @@ const Container = styled.div({
   display: 'grid',
   marginTop: '15rem',
     [`@media (min-width: ${breakpoints.md})`]: {
-      marginTop: '16rem',
+      marginTop: '10rem',
       },
 });
 
@@ -23,6 +23,12 @@ const HeaderContent = styled.div({
   alignContent: 'start',
   padding: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
+    alignContent: 'center',
+    padding: '4rem',
+    width: '100%',
+    marginTop: '-11rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
     alignContent: 'center',
     padding: '4rem',
     width: '60%',
@@ -63,6 +69,7 @@ const Subheader = styled.div({
   backgroundImage: 'linear-gradient(90deg, gray, white)',
   backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
+    textAlign: 'center',  
     fontSize: '20px',
   },
 })
@@ -75,6 +82,12 @@ const Expertise = styled.div({
   margin: 'auto',
   [`@media (min-width: ${breakpoints.md})`]: {
     padding: '2rem',
+    marginTop: '-3rem',
+    display: 'flex',
+    gap: '5rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    padding: '0rem',
     display: 'flex',
     gap: '5rem',
   },
@@ -112,17 +125,18 @@ const Button = styled.div({
     backgroundImage: 'linear-gradient(180deg, black, #A100FF)',
   },
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '20px',
     margin: 'auto',
     width: '20%',
     marginBottom: '8rem',
+    marginTop: '2rem',
     width: '40%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    width: '10%',
-    padding: '0.3rem',
+    width: '15%',
     borderRadius: '15px',
-    marginTop: '1rem',
-    fontSize: '15px',
+    marginTop: '3rem',
+    fontSize: '20px',
     
   }
 });

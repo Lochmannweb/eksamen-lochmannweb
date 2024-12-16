@@ -57,7 +57,7 @@ const Title = styled.div({
   // scroll animation text
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
-  backgroundSize: '30% 100%',
+  backgroundSize: '40% 100%',
   backgroundRepeat: 'no-repeat',
   animation: 'scroll-reveal linear forwards',
   animationTimeline: 'view()',

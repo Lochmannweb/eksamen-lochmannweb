@@ -11,18 +11,17 @@ const breakpoints = {
 };
 
 const Container = styled.div({
-  fontSize: '20px',
   display: 'grid',
   margin: 'auto',
   marginTop: '-27rem',
   padding: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    marginTop: '-30rem',
+    marginTop: '-55rem',
     textAlign: 'center',
-    marginTop: '10rem',
+    padding: '4rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    marginTop: '-32rem',
+    marginTop: '-45rem',
   },
 });
 
@@ -36,12 +35,10 @@ const HeaderTitle = styled.div({
   backgroundClip: 'text',
   marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    lineHeight: '0rem',
-    marginBottom: '0rem',
-    fontSize: '30px',
+    fontSize: '60px',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '59px',
+    fontSize: '70px',
     },
 });
 
@@ -50,6 +47,9 @@ const ContentContainer = styled.div({
   gap: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     },
+   [`@media (min-width: ${breakpoints.lg})`]: {
+     gridTemplateColumns: '1fr 1fr 1fr',
+     },
 });
 
 const Content = styled.div({
@@ -58,14 +58,22 @@ const Content = styled.div({
   borderColor: '#A100FF',
   borderRadius: '25px',
   padding: '0.5rem',
-  // color: 'gray',
   textAlign: 'start',
   color: 'hsl(0 0% 100% / 0)',
   backgroundImage: 'linear-gradient(90deg, white, gray)',
   backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
+    margin: 'auto',
+    textAlign: 'center',
+    width: '90%',
     fontSize: '20px',
     },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+      margin: 'auto',
+      textAlign: 'center',
+      width: '100%',
+      fontSize: '15px',
+      },
 });
 
 // const HighlightedText = styled.span({ 
@@ -93,11 +101,11 @@ export default function Header() {
   return (
     <>
     {(!isMobile && 
-      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/Header-bg.png" alt="bg" width={2000} /> 
+      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/header-home-dbg.png" alt="bg" width={2000} /> 
     )}
 
     {(isTablet && 
-      <img className="-mt-12 -mb-52 md:mb-0 md:mt-12" src="/header-mobil-bg.png" alt="mobil" width={2000} /> 
+      <img className="-mt-12 -mb-52 md:mb-0 md:-mt-72" src="/header-mobil-bg.png" alt="mobil" width={2000} /> 
     )}
     <Container>
         <HeaderTitle>{ForsideData.subheader}</HeaderTitle>

@@ -13,9 +13,8 @@ const Container = styled.div({
   position: 'relative', 
   marginTop: '5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    width: '100%',
-    padding: '15rem',
-    marginTop: '5rem',
+    justifyItems: 'center',
+    marginTop: '12rem',
   },
 });
 
@@ -37,12 +36,22 @@ const Title = styled.div({
   animationTimeline: 'view()',
   backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
+    marginBottom: '2rem',
     textAlign: 'center',
     borderColor: '#A100FF',
     borderRadius: '0px 100px',
-    fontSize: '40px',
-    marginTop: '-5rem',
+    fontSize: '35px',
+    width: '90%',
+    padding: '1rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
     marginBottom: '2rem',
+    textAlign: 'center',
+    borderColor: '#A100FF',
+    borderRadius: '0px 100px',
+    fontSize: '35px',
+    width: '45%',
+    padding: '1rem',
   },
 });
 
@@ -50,7 +59,10 @@ const ImageGrid = styled.div({
   display: 'grid',
   gap: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    gridTemplateColumns: '1fr 1fr 1fr',
+    marginBottom: '5rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    gridTemplateColumns: '1fr 1fr ',
     marginBottom: '5rem',
   },
 });

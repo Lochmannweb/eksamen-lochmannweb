@@ -13,8 +13,10 @@ const breakpoints = {
 const Container = styled.div({
   display: 'grid',
   marginTop: '8rem',
+  margin: 'auto',
     [`@media (min-width: ${breakpoints.md})`]: {
-      marginTop: '16rem',
+      padding: '2rem',
+      marginTop: '10rem',
       },
 });
 
@@ -23,7 +25,10 @@ const HeaderContent = styled.div({
   padding: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     alignContent: 'center',
-    width: '60%',
+    // justifyItems: 'center',
+    marginTop: '-11rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
     marginTop: '-11rem',
   },
 })
@@ -58,9 +63,9 @@ const ImageGrid = styled.div({
   display: 'grid',
   gap: '1rem',
   padding: '2rem',
-  [`@media (min-width: ${breakpoints.md})`]: {
+  justifyContent: 'center',
+  [`@media (min-width: ${breakpoints.lg})`]: {
     display: 'flex',
-    justifyContent: 'center',
     gap: '1rem',
     marginBottom: '3rem',
     marginTop: '-2rem',
@@ -69,11 +74,12 @@ const ImageGrid = styled.div({
 
 const Button = styled.div({
   backgroundColor: 'white',
+  fontSize: '15px',
   color: 'black',
   margin: 'auto',
   width: '80%',
   padding: '0.3rem',
-  borderRadius: '25px',
+  borderRadius: '50px',
   textAlign: 'center',
   marginTop: '1rem',
   color: 'white',
@@ -84,11 +90,14 @@ const Button = styled.div({
     backgroundImage: 'linear-gradient(180deg, black, #A100FF)',
   },
   [`@media (min-width: ${breakpoints.md})`]: {
+    padding: '0.5rem',
+    fontSize: '20px',
     width: '30%',
+    marginTop: '2rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    width: '12%',
-    padding: '0.3rem',
+    width: '28%',
+    padding: '0.5rem',
     borderRadius: '15px',
   },
 });
