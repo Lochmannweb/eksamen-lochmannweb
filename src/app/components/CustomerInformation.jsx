@@ -16,7 +16,7 @@ const Container = styled.div({
     position: 'relative',
     [`@media (min-width: ${breakpoints.md})`]: {
       padding: '0rem',
-      paddingBottom: '0rem',
+      paddingBottom: '2rem',
       display: 'flex',
       justifyContent: 'center',
       gap: '9rem',
@@ -61,25 +61,25 @@ const CustomerInformation = () => {
             </LinksContainer>
         </div>
   
-        {/* <div>
+        <div>
           <Title>{CustomerInformationsData.Ressourcer.title}</Title>
             <LinksContainer>
-              <a className='md:text-xs' href='/' >{CustomerInformationsData.Ressourcer.content2}</a>
+              {/* <a className='md:text-xs' href='/' >{CustomerInformationsData.Ressourcer.content2}</a> */}
               <a className='md:text-xs' href='/Ressourcer'>{CustomerInformationsData.Ressourcer.content3}</a>
               <a className='md:text-xs' href='/Ressourcer'>{CustomerInformationsData.Ressourcer.content4}</a>
-              <a className='md:text-xs' href='/Ressourcer'>{CustomerInformationsData.Ressourcer.content}</a>
+              {/* <a className='md:text-xs' href='/Ressourcer'>{CustomerInformationsData.Ressourcer.content}</a> */}
             </LinksContainer>
         </div>
   
         <div>
           <Title>{CustomerInformationsData.Services.title}</Title>
           <LinksContainer>
-              <a className='md:text-xs' href='/'>{CustomerInformationsData.Services.content}</a>
+              <a className='md:text-xs' href='/About'>{CustomerInformationsData.Services.content}</a>
               <a className='md:text-xs' href='/'>{CustomerInformationsData.Services.content2}</a>
               <a className='md:text-xs' href='/'>{CustomerInformationsData.Services.content3}</a>
               <a className='md:text-xs' href='/'>{CustomerInformationsData.Services.content4}</a>
           </LinksContainer>
-        </div> */}
+        </div>
       </Container>
     </>
   );

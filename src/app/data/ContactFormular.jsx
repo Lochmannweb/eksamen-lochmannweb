@@ -16,3 +16,9 @@ export const ContactPageHeader = {
     city: "2640, Hedehusene. Denmark",
     IG: "Lochmann_web",
 }
+
+export const HomePageContactFormular = {
+    title: "Do you have a brillant idea?",
+    subheader: "Let's talk more about it",
+}
+

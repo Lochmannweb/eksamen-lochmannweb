@@ -6,6 +6,7 @@ import Tech from './components/Tech'
 import styled from '@emotion/styled';
 import Feedback from '@/app/components/Feedback'
 import Projects from '@/app/components/Projects'
+import ContactHomePage from '@/app/components/ContactHomePage'
 
 const Container = styled.div({
   display: 'grid',
@@ -22,6 +23,7 @@ const Page = () => {
       <Tech/>
       <Projects/>
       <Feedback/>
+      <ContactHomePage />
     </Container> 
   )
 }

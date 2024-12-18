@@ -8,12 +8,11 @@ export const CustomerInformationsData = {
         title: "About",
         content: "About LochmannWeb",
         content2: "The mission",
-        content3: "The proces",
-        content4: "Cases",
+        content3: "Follow the proces",
+        content4: "View all projects",
     },
     Ressourcer: {
         title: "Ressourcer",
-        content: "Blog & guidance",
         content2: "FAQ",
         content3: "Contract & terms",
         content4: "GPPR & privacy policy",
@@ -21,7 +20,7 @@ export const CustomerInformationsData = {
     Services: {
         title: "Services",
         content: "Website Development",
-        content2: "Redesign for website",
+        // content2: "Redesign a website",
         content3: "SEO & Speed Optimization",
         content4: "Support & Maintenace",
     },
