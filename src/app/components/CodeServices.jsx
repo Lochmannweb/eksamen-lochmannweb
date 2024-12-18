@@ -56,7 +56,7 @@ const Container = styled.div({
       width: '80%',
       [`@media (min-width: ${breakpoints.lg})`]: {
         marginTop: '3rem',
-        width: '50%',
+        width: '100%',
         gap: '2rem',
       },
     },
@@ -112,9 +112,6 @@ const MyStory = () => {
         <li className='md:text-base'>{ServicesData.Kode.services7}</li>
         <li className='md:text-base'>{ServicesData.Kode.services8}</li>
       </Content>
-      <ImageContainer>
-        {/* <Image className='m-auto' src="/uxuidesign.png" alt="img" srcset="" width={300} height={300} /> */}
-      </ImageContainer>
     </Container>
     </>
   )

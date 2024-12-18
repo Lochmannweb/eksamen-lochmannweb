@@ -1,26 +1,29 @@
 export const ServicesData = {
-    UXUI: {
-        title: "U X / U I Design",
-        content: "I present a modern, minimalist, and responsive UX/UI. The design emphasizes clear messaging, with effective use of whitespace and contrast.",
-        content2: 'The color palette is neutral, featuring subtle accents that highlight interactive elements. The user experience is streamlined with simple navigation, a clear hierarchy, and a focus on key topics such as expertise, process, and projects.',
-        content3: 'Animated icons and section transitions add a dynamic touch, while the text structure balances being informative and engaging.',
-        content4: 'Overall, the website promotes a professional and creative atmosphere, appealing to the target audience for web development and design.',
-        services1: "User Iterface",
-        services2: "User Experience",
-        services3: "Illustrator",
-        services4: "Photoshop",
-        services5: "Spline",
+    title: "Services",
+    WebsiteDevelopment: {
+        title: "Website Development",
+        content1: "Description: Explain how you create custom websites or work with popular CMS platforms such as WordPress, Shopify, etc.",
+        content2: "Technologies: Mention the programming languages and development tools you use, such as HTML, CSS, JavaScript, and PHP, as well as specific platforms.",
+        content3: "Benefits: Highlight how your solutions are responsive, mobile-optimized, and SEO-friendly.",
     },
-    Kode: {
-        title: "Frontend Development",
-        content: "I build modern web technologies, leveraging React-based frameworks like Next.js to ensure fast server-side rendering and optimal SEO. CSS is minimalist and responsive, often implemented through frameworks like Tailwind or custom styling.",
-        services1: "React.js",
-        services2: "JavaScript",
-        services3: "TypeScript",
-        services4: "Tailwind CSS",
-        services5: "CSS",
-        services6: "HTML",
-        services7: "Astro",
-        services8: "Next.js",
-        },
+    WebsiteRedesign: {
+        title: "Website Redesign",
+        content1: "Description: Showcase how you help improve existing websites by optimizing their design, functionality, and user experience.",
+        content2: "Focus Areas: Improved aesthetics, faster loading times, and better conversion rates.",
+    },
+    UXUIDesign: {
+        title: "UX/UI Design",
+        content1: "Description: Explain how you design intuitive and user-friendly interfaces that prioritize delivering an excellent user experience (UX).",
+        content2: "Benefits: Emphasize how effective UX/UI design can enhance customer satisfaction, engagement, and conversions.",
+    },
+    SEOSpeedOptimization: {
+        title: "SEO & Speed Optimization",
+        content1: "Description: Describe how you optimize websites for search engines and ensure fast loading times, improving both user experience and Google rankings.",
+        content2: "Tools: Mention tools and techniques like image compression, caching, and SEO analysis.",
+    },
+    SupportMaintenance: {
+        title: "SEO & Speed Optimization",
+        content1: "Description: Provide an overview of the support services you offer, such as regular updates, bug fixes, security checks, and technical assistance after project completion.",
+        content2: "Services: Offer various support plans, such as monthly maintenance or on-demand troubleshooting.",
+    },
 }

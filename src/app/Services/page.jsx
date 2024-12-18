@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { RessourcerData } from '../data/RessourcerData'
+import { ServicesData } from '../data/ServicesData'
 import styled from '@emotion/styled';
 
 const breakpoints = {
@@ -62,31 +62,38 @@ const Ressourcer = () => {
   return (
     <Container>
         <div>
-            <Title >{RessourcerData.title}</Title>
+            <Title >{ServicesData.title}</Title>
         </div>
 
         <div>
-            <Subheader>{RessourcerData.vejledning.title}</Subheader> 
-            <Content>{RessourcerData.vejledning.content1}</Content> <br /> 
-            <Content>{RessourcerData.vejledning.content2}</Content>
+            <Subheader>{ServicesData.WebsiteDevelopment.title}</Subheader>
+            <Content>{ServicesData.WebsiteDevelopment.content1}</Content> <br /> 
+            <Content>{ServicesData.WebsiteDevelopment.content2}</Content> <br /> 
+            <Content>{ServicesData.WebsiteDevelopment.content3}</Content>
         </div>
 
         <div>
-            <Subheader>{RessourcerData.questions.title}</Subheader>
-            <Content>{RessourcerData.questions.content1}</Content> <br /> 
-            <Content>{RessourcerData.questions.content2}</Content>
+            <Subheader>{ServicesData.WebsiteRedesign.title}</Subheader>
+            <Content>{ServicesData.WebsiteRedesign.content1}</Content> <br /> 
+            <Content>{ServicesData.WebsiteRedesign.content2}</Content>
         </div>
 
         <div>
-            <Subheader>{RessourcerData.ContractsAndTerms.title}</Subheader>
-            <Content>{RessourcerData.ContractsAndTerms.content1}</Content> <br /> 
-            <Content>{RessourcerData.ContractsAndTerms.content2}</Content>
+            <Subheader>{ServicesData.UXUIDesign.title}</Subheader>
+            <Content>{ServicesData.UXUIDesign.content1}</Content> <br /> 
+            <Content>{ServicesData.UXUIDesign.content2}</Content>
         </div>
 
         <div>
-            <Subheader>{RessourcerData.GdprAndPrivacyPolicy.title}</Subheader>
-            <Content>{RessourcerData.GdprAndPrivacyPolicy.content1}</Content> <br /> 
-            <Content>{RessourcerData.GdprAndPrivacyPolicy.content2}</Content>
+            <Subheader>{ServicesData.SEOSpeedOptimization.title}</Subheader>
+            <Content>{ServicesData.SEOSpeedOptimization.content1}</Content> <br />
+            <Content>{ServicesData.SEOSpeedOptimization.content2}</Content>
+        </div>
+
+        <div>
+            <Subheader>{ServicesData.SupportMaintenance.title}</Subheader>
+            <Content>{ServicesData.SupportMaintenance.content1}</Content> <br />
+            <Content>{ServicesData.SupportMaintenance.content2}</Content>
         </div>
     </Container>
   )
