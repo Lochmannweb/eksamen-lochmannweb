@@ -69,12 +69,6 @@ export default function Gallery() {
                 height={500}
               />
             </Link>
-            {image.metadata && (
-              <div className="text-center mt-2 text-white">
-                <h2 className="text-xl font-semibold">{image.metadata.title}</h2>
-                <p>{image.metadata.Description}</p>
-              </div>
-            )}
           </div>
         ))
       ) : (
