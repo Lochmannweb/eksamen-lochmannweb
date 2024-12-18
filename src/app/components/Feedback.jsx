@@ -11,7 +11,7 @@ const breakpoints = {
   const Container = styled.div({
     padding: '2rem',
     textAlign: 'center',
-    marginTop: '8rem',
+    marginTop: '3rem',
     [`@media (min-width: ${breakpoints.md})`]: {
       padding: '4rem',
     },
@@ -19,7 +19,7 @@ const breakpoints = {
       padding: '5rem',
       marginLeft: '24rem',
       marginRight: '24rem',
-      marginTop: '5rem',
+      marginTop: '3rem',
     },
   });
 

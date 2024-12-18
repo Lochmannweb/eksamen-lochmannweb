@@ -12,20 +12,24 @@ const breakpoints = {
 
 const Container = styled.div({
   display: 'grid',
-  marginTop: '8rem',
-  margin: 'auto',
+  marginTop: '3rem',
+  padding: '2rem',
     [`@media (min-width: ${breakpoints.md})`]: {
+      margin: 'auto',
       padding: '2rem',
-      marginTop: '10rem',
+      marginTop: '5rem',
       },
+      [`@media (min-width: ${breakpoints.lg})`]: {
+        margin: 'auto',
+        padding: '2rem',
+        marginTop: '5rem',
+        },
 });
 
 const HeaderContent = styled.div({
   alignContent: 'start',
-  padding: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     alignContent: 'center',
-    // justifyItems: 'center',
     marginTop: '-11rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -39,7 +43,6 @@ const Title = styled.div({
   borderBottomColor: '#A100FF',
   borderWidth: 'thin',
   textAlign: 'start',
-  padding: '0.3rem',
   borderRadius: '0px',
   marginBottom: '1rem',
 
@@ -62,7 +65,6 @@ const Title = styled.div({
 const ImageGrid = styled.div({
   display: 'grid',
   gap: '1rem',
-  padding: '2rem',
   justifyContent: 'center',
   [`@media (min-width: ${breakpoints.lg})`]: {
     display: 'flex',
@@ -77,11 +79,11 @@ const Button = styled.div({
   fontSize: '15px',
   color: 'black',
   margin: 'auto',
-  width: '80%',
+  width: '100%',
   padding: '0.3rem',
   borderRadius: '50px',
   textAlign: 'center',
-  marginTop: '1rem',
+  marginTop: '3rem',
   color: 'white',
   filter: 'drop-shadow(0 0 0.75rem #A100FF)',
   backgroundImage: 'linear-gradient(90deg, black, #A100FF)',
@@ -92,13 +94,14 @@ const Button = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     padding: '0.5rem',
     fontSize: '20px',
-    width: '30%',
+    width: '60%',
     marginTop: '2rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     width: '28%',
     padding: '0.5rem',
     borderRadius: '15px',
+    marginTop: '1rem',
   },
 });
 

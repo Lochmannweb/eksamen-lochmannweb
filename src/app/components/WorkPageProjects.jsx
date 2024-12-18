@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { RecentWorkData } from '../data/MyWorkData';
 import "@fontsource/keania-one";
+import Project from './Project';
 
 const breakpoints = {
   md: '768px', 
@@ -61,10 +62,6 @@ const ImageGrid = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     marginBottom: '5rem',
   },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-    gridTemplateColumns: '1fr 1fr ',
-    marginBottom: '5rem',
-  },
 });
 
 function LatestProjects() {
@@ -73,8 +70,7 @@ function LatestProjects() {
       <Container>
         <Title>{RecentWorkData.title}</Title>
         <ImageGrid>
-          <a href="https://foofest-eksamen-line.netlify.app/" prefetch={false}><img src="/foofest-desktop.png" alt="png" width={500} /></a>
-          <a href="https://www.cgc-wargaming.dk/" prefetch={false}><img src="/cgc-desktop.png" alt="png" width={500} /></a>
+          <Project />
         </ImageGrid>
       </Container>
     </>

@@ -15,6 +15,8 @@ const Container = styled.div({
     paddingBottom: '5rem',
     position: 'relative',
     [`@media (min-width: ${breakpoints.md})`]: {
+      padding: '0rem',
+      paddingBottom: '0rem',
       display: 'flex',
       justifyContent: 'center',
       gap: '9rem',

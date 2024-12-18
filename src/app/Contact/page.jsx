@@ -21,8 +21,8 @@ const Container = styled.div({
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       top: '8rem',
-      width: '40%',
-      right: '18rem',
+      width: '30%',
+      right: '23rem',
       margin: 'unset',
       position: 'absolute',
     },
@@ -36,11 +36,11 @@ function ContactForm() {
   return (
     <>
     {(!isMobile && 
-      <img className="mt-56 -mb-52 md:-mb-28 md:-mt-12" src="/header-contact-dbg.png" alt="bg" width={2000} /> 
+      <img className="mt-56 -mb-52 md:-mb-28 md:-mt-7" src="/contact-test-dbg.png" alt="bg" width={2000} /> 
     )}
 
     {(isTablet && 
-      <img src="/contact-mbg.png" alt="mobil" width={2000} /> 
+      <img src="/header-contact-mbg.png" alt="mobil" width={2000} /> 
     )}
       <Container>
         <Contact />

@@ -20,13 +20,16 @@ const Aboutpage = () => {
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
+    console.log('Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL);
+    console.log('Supabase ANON KEY:', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+
   return (
     <>
     {(!isMobile && 
-      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/header-proces-dbg.png" alt="bg" width={2000} /> 
+      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/header-follow-dbg.png" alt="bg" width={2000} /> 
     )}
     {(isTablet && 
-      <img src="/follow-proces-mbg.png" alt="mobil" width={2000} /> 
+      <img src="/header-proces-mbg.png" alt="mobil" width={2000} /> 
     )}
       <Container>
         <Header />  

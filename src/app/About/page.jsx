@@ -8,8 +8,17 @@ import CodeServices from '../components/CodeServices';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 
+const breakpoints = {
+  md: '768px', 
+  lg: '1024px',
+};
+
 const Container = styled.div({
+  marginTop: '-2rem',
   padding: '2rem',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    marginTop: '0rem',
+  },
 })
 
 const Aboutpage = () => {
@@ -24,7 +33,7 @@ const Aboutpage = () => {
     )}
 
     {(isTablet && 
-      <img src="/journey-service-mbg.png" alt="mobil" width={2000} /> 
+      <img src="/header-journey-mbg.png" alt="mobil" width={2000} /> 
     )}
       <Container>
           <MyStory />

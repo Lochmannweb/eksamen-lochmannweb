@@ -12,21 +12,24 @@ const breakpoints = {
 
 const Container = styled.div({
   display: 'grid',
-  marginTop: '15rem',
+  marginTop: '12rem',
+  padding: '2rem',
     [`@media (min-width: ${breakpoints.md})`]: {
-      marginTop: '10rem',
+      marginTop: '5rem',
       },
+      [`@media (min-width: ${breakpoints.md})`]: {
+        marginTop: '10rem',
+        },
 });
 
 const HeaderContent = styled.div({
   margin: 'auto',
   alignContent: 'start',
-  padding: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     alignContent: 'center',
     padding: '4rem',
     width: '100%',
-    marginTop: '-11rem',
+    marginTop: '-5rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     alignContent: 'center',
@@ -42,7 +45,7 @@ const Title = styled.div({
   borderBottomColor: '#A100FF',
   borderWidth: 'thin', 
   textAlign: 'start',
-  padding: '0.3rem',
+  // padding: '0.3rem',
   borderRadius: '0px',
   marginBottom: '1rem',
 

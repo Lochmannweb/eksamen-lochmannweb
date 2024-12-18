@@ -13,7 +13,7 @@ const breakpoints = {
 const Container = styled.div({
   display: 'grid',
   margin: 'auto',
-  marginTop: '-27rem',
+  marginTop: '-25rem',
   padding: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     marginTop: '-55rem',
@@ -36,9 +36,11 @@ const HeaderTitle = styled.div({
   marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '60px',
+    lineHeight: '4rem',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '70px',
+    lineHeight: '5.5rem',
     },
 });
 
@@ -60,7 +62,7 @@ const Content = styled.div({
   padding: '0.5rem',
   textAlign: 'start',
   color: 'hsl(0 0% 100% / 0)',
-  backgroundImage: 'linear-gradient(90deg, white, gray)',
+  backgroundImage: 'linear-gradient(90deg, gray, white)',
   backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
     margin: 'auto',
@@ -101,11 +103,11 @@ export default function Header() {
   return (
     <>
     {(!isMobile && 
-      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/header-home-dbg.png" alt="bg" width={2000} /> 
+      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/header-dbg.png" alt="bg" width={2000} /> 
     )}
 
     {(isTablet && 
-      <img className="-mt-12 -mb-52 md:mb-0 md:-mt-72" src="/header-mobil-bg.png" alt="mobil" width={2000} /> 
+      <img className="-mt-12 -mb-52 md:mb-0 md:-mt-72" src="/header-mbg.png" alt="mobil" width={2000} /> 
     )}
     <Container>
         <HeaderTitle>{ForsideData.subheader}</HeaderTitle>
