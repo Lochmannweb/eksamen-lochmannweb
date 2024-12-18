@@ -4,7 +4,7 @@
 // import Image from "next/image"
 import React from 'react'
 import styled from '@emotion/styled';
-import { ServicesData } from '@/app/data/ServicesData'
+import { UXUIData } from '@/app/data/UXUIData'
 import Image from 'next/image';
 import "@fontsource/keania-one";
 
@@ -99,18 +99,18 @@ const MyStory = () => {
 
   return (
     <>
-    <Title>{ServicesData.Kode.title}</Title>
+    <Title>{UXUIData.Kode.title}</Title>
     <Container>
       <Content>
-        <ContentSubheder>{ServicesData.Kode.content}</ContentSubheder> <br />
-        <li className='md:text-base'>{ServicesData.Kode.services1}</li>
-        <li className='md:text-base'>{ServicesData.Kode.services2}</li>
-        <li className='md:text-base'>{ServicesData.Kode.services3}</li>
-        <li className='md:text-base'>{ServicesData.Kode.services4}</li>
-        <li className='md:text-base'>{ServicesData.Kode.services5}</li>
-        <li className='md:text-base'>{ServicesData.Kode.services6}</li>
-        <li className='md:text-base'>{ServicesData.Kode.services7}</li>
-        <li className='md:text-base'>{ServicesData.Kode.services8}</li>
+        <ContentSubheder>{UXUIData.Kode.content}</ContentSubheder> <br />
+        <li className='md:text-base'>{UXUIData.Kode.services1}</li>
+        <li className='md:text-base'>{UXUIData.Kode.services2}</li>
+        <li className='md:text-base'>{UXUIData.Kode.services3}</li>
+        <li className='md:text-base'>{UXUIData.Kode.services4}</li>
+        <li className='md:text-base'>{UXUIData.Kode.services5}</li>
+        <li className='md:text-base'>{UXUIData.Kode.services6}</li>
+        <li className='md:text-base'>{UXUIData.Kode.services7}</li>
+        <li className='md:text-base'>{UXUIData.Kode.services8}</li>
       </Content>
     </Container>
     </>

@@ -33,7 +33,7 @@ const Aboutpage = () => {
     )}
 
     {(isTablet && 
-      <img src="/header-journey-mbg.png" alt="mobil" width={2000} /> 
+      <img src="/test-journey-mbg.png" alt="mobil" width={2000} /> 
     )}
       <Container>
           <MyStory />
