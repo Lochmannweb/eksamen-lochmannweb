@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { ServicesData } from '../data/UXUIData'
+import { ServicesData } from '../data/ServicesData'
 import styled from '@emotion/styled';
 
 const breakpoints = {
