@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/app/lib/supabaseClient';
 import styled from '@emotion/styled';
+import { useTheme } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
 
 const breakpoints = {
   md: '768px', 
@@ -73,6 +75,17 @@ const ContentDataDesc = styled.div({
   },
 });
 
+const ContentDatasSubheader = styled.div({
+  fontSize: '20px',
+  fontFamily: '"Keania One", sans-serif',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '25px',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '25px',
+  },
+});
+
 const ProTypeImage = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
   },
@@ -121,51 +134,64 @@ export default function ImageAndDataPage({ params }) {
   const [fetchError, setFetchError] = useState(null);
   const [selectedLW, setSelectedLW] = useState(null);
   const [selectedHeaderImage, setSelectedHeaderImage] = useState(null);
+  const [selectedMobileHeaderImage, setSelectedMobileHeaderImage] = useState(null);
   const [selectedPrototypeImage, setSelectedPrototypeImage] = useState(null);
   const [selectedWebImage, setSelectedWebImage] = useState(null);
   const [loadingLW, setLoadingLW] = useState(false);
 
-  useEffect(() => {
-    console.log("Fetching data for:", params.id); 
-    const imageBaseName = params.id.split('.')[0].trim();
+  const theme = useTheme();
+  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
+  useEffect(() => {
+    console.log("Fetching data for:", params.id);
+    const imageBaseName = params.id.split('.')[0].trim();
+  
     const fetchData = async () => {
       try {
         // Hent _HEADER billedet
         const { data: headerData, error: headerError } = await supabase.storage
           .from('LochmannWeb')
           .download(`${imageBaseName}_HEADER`);
-
+  
         if (headerError) throw headerError;
         setSelectedHeaderImage(URL.createObjectURL(headerData));
-
+  
+        // Hent _MOBIL billedet
+        const { data: mobileHeaderData, error: mobileHeaderError } = await supabase.storage
+          .from('LochmannWeb')
+          .download(`${imageBaseName}_MOBIL`);
+  
+        if (mobileHeaderError) throw mobileHeaderError;
+        setSelectedMobileHeaderImage(URL.createObjectURL(mobileHeaderData));
+  
         // Hent _PROTOTYPE billedet
         const { data: prototypeData, error: prototypeError } = await supabase.storage
           .from('LochmannWeb')
           .download(`${imageBaseName}_PROTOTYPE`);
-
+  
         if (prototypeError) throw prototypeError;
-        console.error('Prototype error:', prototypeError); 
+        console.error('Prototype error:', prototypeError);
         setSelectedPrototypeImage(URL.createObjectURL(prototypeData));
-
+  
         // Hent _WEB billedet
         const { data: webData, error: webError } = await supabase.storage
           .from('LochmannWeb')
           .download(`${imageBaseName}_WEB`);
-
+  
         if (webError) throw webError;
         console.error('Web error:', webError);
         setSelectedWebImage(URL.createObjectURL(webData));
-
+  
         // Hent LW data
         setLoadingLW(true);
         const { data: lwData, error: lwError } = await supabase
           .from('LW')
           .select('*')
           .ilike('title', `%${imageBaseName}%`);
-
+  
         if (lwError) throw lwError;
-
+  
         if (lwData && lwData.length > 0) {
           setSelectedLW(lwData[0]);
         } else {
@@ -179,25 +205,31 @@ export default function ImageAndDataPage({ params }) {
         setLoadingLW(false);
       }
     };
-
+  
     fetchData();
   }, [params.id]);
 
   return (
     <>
     <Container>
-      <HeaderImage>
-        {selectedHeaderImage ? (
-          <img src={selectedHeaderImage} alt={`${params.id}_HEADER`} width={2000} />
-        ) : (
-          <div>Loading header image...</div>
-        )}
-      </HeaderImage>
+    {(!isMobile && 
+        <HeaderImage>
+          {selectedHeaderImage && (
+            <img src={selectedHeaderImage} alt={`${params.id}_HEADER`} width={2000} />
+          )}
+        </HeaderImage>
+      )}
+
+      {(isMobile && 
+        <HeaderImage>
+          {selectedMobileHeaderImage && (
+            <img src={selectedMobileHeaderImage} alt={`${params.id}_MOBIL`} width={2000} />
+          )}
+        </HeaderImage>
+      )}
 
       <Content>
-        {loadingLW ? (
-          <Load>Loading data...</Load>
-        ) : selectedLW ? (
+        {selectedLW && (
           <>
             <ContentData>
               <ContentDataTitle>{selectedLW.formål}</ContentDataTitle>
@@ -210,17 +242,17 @@ export default function ImageAndDataPage({ params }) {
 
               <div>
                 <div>
-                  <ContentDataTitle>{selectedLW.designcolor}</ContentDataTitle>
+                  <ContentDatasSubheader>{selectedLW.designcolor}</ContentDatasSubheader>
                   <ContentDataDesc>{selectedLW.designcolorcontent}</ContentDataDesc>
                 </div>
 
                 <div>
-                  <ContentDataTitle>{selectedLW.designnavigation}</ContentDataTitle>
+                  <ContentDatasSubheader>{selectedLW.designnavigation}</ContentDatasSubheader>
                   <ContentDataDesc>{selectedLW.designnavigationcontent}</ContentDataDesc>
                 </div>
 
                 <div>
-                  <ContentDataTitle>{selectedLW.designsektioner}</ContentDataTitle>
+                  <ContentDatasSubheader>{selectedLW.designsektioner}</ContentDatasSubheader>
                   <div>
                     <ContentDataDesc>{selectedLW.designsektionhome}</ContentDataDesc>
                     <ContentDataDesc>{selectedLW.designsektionabout}</ContentDataDesc>
@@ -230,31 +262,29 @@ export default function ImageAndDataPage({ params }) {
                 </div>
 
                 <div>
-                  <ContentDataTitle>{selectedLW.designimages}</ContentDataTitle>
+                  <ContentDatasSubheader>{selectedLW.designimages}</ContentDatasSubheader>
                   <ContentDataDesc>{selectedLW.designimagescontent}</ContentDataDesc>
                 </div>
 
                 <div>
-                  <ContentDataTitle>{selectedLW.designtypo}</ContentDataTitle>
+                  <ContentDatasSubheader>{selectedLW.designtypo}</ContentDatasSubheader>
                   <ContentDataDesc>{selectedLW.designtypocontent}</ContentDataDesc>
                 </div>
 
                 <div>
-                  <ContentDataTitle>{selectedLW.designicon}</ContentDataTitle>
+                  <ContentDatasSubheader>{selectedLW.designicon}</ContentDatasSubheader>
                   <ContentDataDesc>{selectedLW.designiconcontent}</ContentDataDesc>
                 </div>
               </div>
             </div>
           </>
-        ) : (
-          <div>No LW data available.</div>
         )}
   
         <ProTypeImage>
           {selectedPrototypeImage ? (
             <img src={selectedPrototypeImage} className='m-auto' alt={`${params.id}_PROTOTYPE`} width={1000} />
           ) : (
-            <div>Loading prototype image...</div>
+            <div>Loading...</div>
           )}
         </ProTypeImage>
   
@@ -269,10 +299,8 @@ export default function ImageAndDataPage({ params }) {
           </ContentData>
   
           <WebImage>
-            {selectedWebImage ? (
+            {selectedWebImage && (
               <img src={selectedWebImage} alt={`${params.id}_WEB`} width={800} />
-            ) : (
-              <div>Loading web image...</div>
             )}
           </WebImage>
         </WebContentContainer>

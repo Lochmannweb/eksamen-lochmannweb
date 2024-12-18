@@ -55,9 +55,9 @@ const CustomerInformation = () => {
           <Title>{CustomerInformationsData.about.title}</Title>
             <LinksContainer>
                <a className='md:text-xs' href='/About'>{CustomerInformationsData.about.content}</a>
-               <a className='md:text-xs' href='/About'>{CustomerInformationsData.about.content2}</a>
                <a className='md:text-xs' href='/MyWork'>{CustomerInformationsData.about.content3}</a>
                <a className='md:text-xs' href='/MyWork'>{CustomerInformationsData.about.content4}</a>
+               {/* <a className='md:text-xs' href='/'>{CustomerInformationsData.about.content2}</a> */}
             </LinksContainer>
         </div>
   

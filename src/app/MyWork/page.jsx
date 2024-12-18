@@ -8,11 +8,20 @@ import WorkPageProjects from '@/app/components/WorkPageProjects'
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 
+const breakpoints = {
+  md: '768px', 
+  lg: '1024px',
+};
+
 const Container = styled.div({
   paddingTop: '5rem',
   paddingBottom: '5rem',
   paddingLeft: '1rem',
   paddingRight: '1rem',
+  [`@media (min-width: ${breakpoints.md})`]: {
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+  },
 });
 
 const Aboutpage = () => {

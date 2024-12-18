@@ -20,7 +20,7 @@ export default function Gallery() {
 
         // Filter out images that have `_angle` in their name to show only the main images
         const galleryImages = imageData.filter((image) =>
-          image.name.indexOf('_PROTOTYPE') === -1 && image.name.indexOf('_WEB') === -1 && image.name.indexOf('_HEADER') === -1 && image.name !== '.emptyFolderPlaceholder'
+          image.name.indexOf('_PROTOTYPE') === -1 && image.name.indexOf('_WEB') === -1 && image.name.indexOf('_HEADER') === -1 && image.name.indexOf('_MOBIL') === -1 && image.name !== '.emptyFolderPlaceholder'
         );
 
         setMainCGC(galleryImages);
@@ -57,7 +57,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div >
+    <>
       {mainCGC.length > 0 ? (
         mainCGC.map((image) => (
           <div key={image.name}>
@@ -75,6 +75,6 @@ export default function Gallery() {
         <p>No images found or error occurred.</p>
       )}
       {fetchError && <p className="text-red-500">{fetchError}</p>}
-    </div>
+    </>
   );
 }

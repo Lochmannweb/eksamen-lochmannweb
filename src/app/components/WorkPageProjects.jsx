@@ -61,6 +61,7 @@ const ImageGrid = styled.div({
   gap: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     marginBottom: '5rem',
+    display: 'flex',
   },
 });
 
