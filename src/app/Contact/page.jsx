@@ -40,7 +40,7 @@ function ContactForm() {
     )}
 
     {(isTablet && 
-      <img src="/header-contact-mbg.png" alt="mobil" width={2000} /> 
+      <img src="/test-contact-mbg.png" alt="mobil" width={2000} /> 
     )}
       <Container>
         <Contact />

@@ -38,7 +38,7 @@ const Aboutpage = () => {
       <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/header-follow-dbg.png" alt="bg" width={2000} /> 
     )}
     {(isTablet && 
-      <img src="/header-proces-mbg.png" alt="mobil" width={2000} /> 
+      <img src="/test-follow-mbg.png" alt="mobil" width={2000} /> 
     )}
       <Container>
         <Header />  

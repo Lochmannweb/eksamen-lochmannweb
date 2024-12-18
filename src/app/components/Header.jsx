@@ -107,7 +107,7 @@ export default function Header() {
     )}
 
     {(isTablet && 
-      <img className="-mt-12 -mb-52 md:mb-0 md:-mt-72" src="/header-mbg.png" alt="mobil" width={2000} /> 
+      <img className="-mt-12 -mb-52 md:mb-0 md:-mt-72" src="/test-header-mbg.png" alt="mobil" width={2000} /> 
     )}
     <Container>
         <HeaderTitle>{ForsideData.subheader}</HeaderTitle>
