@@ -36,7 +36,7 @@ function ContactForm() {
   return (
     <>
     {(!isMobile && 
-      <img className="mt-56 -mb-52 md:-mb-28 md:-mt-7" src="/contact-test-dbg.png" alt="bg" width={2000} /> 
+      <img className="mt-56 -mb-52 md:-mb-28 md:-mt-7" src="/test-contact-dbg.png" alt="bg" width={2000} /> 
     )}
 
     {(isTablet && 

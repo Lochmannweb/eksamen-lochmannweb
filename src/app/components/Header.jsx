@@ -103,7 +103,7 @@ export default function Header() {
   return (
     <>
     {(!isMobile && 
-      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/header-dbg.png" alt="bg" width={2000} /> 
+      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/test-header-dbg.png" alt="bg" width={2000} /> 
     )}
 
     {(isTablet && 

@@ -18,7 +18,7 @@ const Container = styled.div({
       marginTop: '5rem',
       },
       [`@media (min-width: ${breakpoints.md})`]: {
-        marginTop: '10rem',
+        marginTop: '5rem',
         },
 });
 
