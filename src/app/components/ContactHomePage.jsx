@@ -57,7 +57,7 @@ function ContactForm() {
        </Header>
 
       <div className='grid'>
-        <label htmlFor="text" >
+        <label htmlFor="text" className='font-keania'>
           Company name
         </label>
         <input
@@ -75,7 +75,7 @@ function ContactForm() {
       </div>
 
       <div className='grid'>
-        <label htmlFor="text" >
+        <label htmlFor="text" className='font-keania'>
           Full name
         </label>
         <input
@@ -93,7 +93,7 @@ function ContactForm() {
       </div>
 
       <div className='grid'>
-        <label htmlFor="tel" >
+        <label htmlFor="tel" className='font-keania'>
           Phone number
         </label>
         <input
@@ -111,7 +111,7 @@ function ContactForm() {
       </div>
 
       <div className='grid'>
-        <label htmlFor="email" >
+        <label htmlFor="email" className='font-keania' >
           Email Address
         </label>
         <input
@@ -129,7 +129,7 @@ function ContactForm() {
       </div>
 
       <div className='grid'>
-        <label htmlFor="message" >
+        <label htmlFor="message" className='font-keania' >
           Message
         </label>
         <textarea
@@ -144,7 +144,7 @@ function ContactForm() {
         />
       </div>
 
-      <div className='m-auto md:m-0 lg:m-auto'>
+      <div className='m-auto md:m-auto lg:m-auto'>
         <button type="submit" className='font-keania bg-white hover:bg-gray hover:text-white text-black p-2 pl-32 pr-32 lg:pl-20 lg:pr-20 mt-3' disabled={state.submitting}>
           Send
         </button>

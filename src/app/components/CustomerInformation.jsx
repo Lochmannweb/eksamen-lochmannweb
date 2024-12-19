@@ -60,26 +60,26 @@ const CustomerInformation = () => {
                {/* <a className='md:text-xs' href='/'>{CustomerInformationsData.about.content2}</a> */}
             </LinksContainer>
         </div>
-  
-        <div>
-          <Title>{CustomerInformationsData.Ressourcer.title}</Title>
-            <LinksContainer>
+  {/*  */}
+        {/* <div> */}
+          {/* <Title>{CustomerInformationsData.Ressourcer.title}</Title> */}
+            {/* <LinksContainer> */}
               {/* <a className='md:text-xs' href='/' >{CustomerInformationsData.Ressourcer.content2}</a> */}
-              <a className='md:text-xs' href='/Ressourcer'>{CustomerInformationsData.Ressourcer.content3}</a>
-              <a className='md:text-xs' href='/Ressourcer'>{CustomerInformationsData.Ressourcer.content4}</a>
+              {/* <a className='md:text-xs' href='/Ressourcer'>{CustomerInformationsData.Ressourcer.content3}</a> */}
+              {/* <a className='md:text-xs' href='/Ressourcer'>{CustomerInformationsData.Ressourcer.content4}</a> */}
               {/* <a className='md:text-xs' href='/Ressourcer'>{CustomerInformationsData.Ressourcer.content}</a> */}
-            </LinksContainer>
-        </div>
-  
-        <div>
-          <Title>{CustomerInformationsData.Services.title}</Title>
-          <LinksContainer>
-              <a className='md:text-xs' href='/About'>{CustomerInformationsData.Services.content}</a>
+            {/* </LinksContainer> */}
+        {/* </div> */}
+  {/*  */}
+        {/* <div> */}
+          {/* <Title>{CustomerInformationsData.Services.title}</Title> */}
+          {/* <LinksContainer> */}
+              {/* <a className='md:text-xs' href='/About'>{CustomerInformationsData.Services.content}</a> */}
               {/* <a className='md:text-xs' href='/Services'>{CustomerInformationsData.Services.content2}</a> */}
-              <a className='md:text-xs' href='/Services'>{CustomerInformationsData.Services.content3}</a>
-              <a className='md:text-xs' href='/Services'>{CustomerInformationsData.Services.content4}</a>
-          </LinksContainer>
-        </div>
+              {/* <a className='md:text-xs' href='/Services'>{CustomerInformationsData.Services.content3}</a> */}
+              {/* <a className='md:text-xs' href='/Services'>{CustomerInformationsData.Services.content4}</a> */}
+          {/* </LinksContainer> */}
+        {/* </div> */}
       </Container>
     </>
   );

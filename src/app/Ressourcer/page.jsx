@@ -18,7 +18,7 @@ const Container = styled.div({
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     paddingTop: '10rem',
-    paddingBottom: '7rem',
+    paddingBottom: '12rem',
     width: '50%',
     justifySelf: 'center',
   }
@@ -65,17 +65,17 @@ const Ressourcer = () => {
             <Title >{RessourcerData.title}</Title>
         </div>
 
-        <div>
+        {/* <div>
             <Subheader>{RessourcerData.vejledning.title}</Subheader> 
             <Content>{RessourcerData.vejledning.content1}</Content> <br /> 
             <Content>{RessourcerData.vejledning.content2}</Content>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
             <Subheader>{RessourcerData.questions.title}</Subheader>
             <Content>{RessourcerData.questions.content1}</Content> <br /> 
             <Content>{RessourcerData.questions.content2}</Content>
-        </div>
+        </div> */}
 
         <div>
             <Subheader>{RessourcerData.ContractsAndTerms.title}</Subheader>

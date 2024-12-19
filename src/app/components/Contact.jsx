@@ -16,11 +16,11 @@ function ContactForm() {
       return <p className='font-keania md:text-2xl m-auto md:r-44 md:mt-48'>Looking forward to work with you!</p>;
   }
   return (
-    <form className='grid -mt-10 gap-4 lg:mt-20' onSubmit={handleSubmit}>
+    <form className='grid -mt-10 md:mt-14 gap-4 lg:mt-20' onSubmit={handleSubmit}>
 
       <div className='grid'>
         <label htmlFor="text" className='font-keania'>
-          Website Name
+          Company name
         </label>
         <input
           id="text"

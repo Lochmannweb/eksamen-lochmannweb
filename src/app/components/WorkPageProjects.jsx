@@ -37,6 +37,7 @@ const Title = styled.div({
   animationTimeline: 'view()',
   backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
+    justifySelf: 'center',
     marginBottom: '2rem',
     textAlign: 'center',
     borderColor: '#A100FF',
@@ -62,6 +63,12 @@ const ImageGrid = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     marginBottom: '5rem',
     display: 'flex',
+    width: '80%'
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    marginBottom: '5rem',
+    display: 'flex',
+    // width: '80%'
   },
 });
 

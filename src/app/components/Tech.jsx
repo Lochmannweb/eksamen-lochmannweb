@@ -15,7 +15,7 @@ const Container = styled.div({
   marginTop: '12rem',
   padding: '2rem',
     [`@media (min-width: ${breakpoints.md})`]: {
-      marginTop: '5rem',
+      marginTop: '-14rem',
       },
       [`@media (min-width: ${breakpoints.md})`]: {
         marginTop: '5rem',
@@ -27,9 +27,9 @@ const HeaderContent = styled.div({
   alignContent: 'start',
   [`@media (min-width: ${breakpoints.md})`]: {
     alignContent: 'center',
-    padding: '4rem',
-    width: '100%',
-    marginTop: '-5rem',
+    paddingTop: '4rem',
+    // width: '100%',
+    marginTop: '-14rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     alignContent: 'center',
@@ -84,7 +84,7 @@ const Expertise = styled.div({
   padding: '2rem',
   margin: 'auto',
   [`@media (min-width: ${breakpoints.md})`]: {
-    padding: '2rem',
+    padding: '5rem',
     marginTop: '-3rem',
     display: 'flex',
     gap: '5rem',
@@ -132,7 +132,7 @@ const Button = styled.div({
     margin: 'auto',
     width: '20%',
     marginBottom: '8rem',
-    marginTop: '2rem',
+    marginTop: '-2rem',
     width: '40%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {

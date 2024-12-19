@@ -90,11 +90,11 @@ const Ressourcer = () => {
             <Content>{ServicesData.SEOSpeedOptimization.content2}</Content>
         </div>
 
-        <div>
+        {/* <div>
             <Subheader>{ServicesData.SupportMaintenance.title}</Subheader>
             <Content>{ServicesData.SupportMaintenance.content1}</Content> <br />
             <Content>{ServicesData.SupportMaintenance.content2}</Content>
-        </div>
+        </div> */}
     </Container>
   )
 }

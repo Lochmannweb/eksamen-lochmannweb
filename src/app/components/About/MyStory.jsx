@@ -63,9 +63,10 @@ const Title = styled.div({
   animationTimeline: 'view()',
   backgroundClip: 'text',
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '40px',
     width: '80%',
     textAlign: 'center',
-    marginBottom: '4rem',
+    marginBottom: '2rem',
     borderColor: '#A100FF',
     borderRadius: '0px 100px',
   },

@@ -30,6 +30,7 @@ const Content = styled.div({
   padding: '2rem',
   gap: '0rem',
   [`@media (min-width: ${breakpoints.md})`]: {
+    marginTop: '-8rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     width: '50%',
@@ -99,6 +100,7 @@ const WebContentContainer = styled.div({
   marginBottom: '3rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     gridTemplateColumns: '1fr 1fr',
+    marginTop: '2rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
   },
@@ -118,6 +120,7 @@ const WebButtom = styled.div({
   textAlign: 'center',
   color: 'black',
   borderRadius: '50px',
+  width: '100%',
   ':hover': {
     backgroundImage: 'linear-gradient(180deg, white, gray)',
   },
@@ -125,6 +128,7 @@ const WebButtom = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '40%',
     right: '0',
+    marginBottom: '2rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
   },

@@ -109,12 +109,13 @@ const MyStory = () => {
     <Title>{UXUIData.UXUI.title}</Title>
     <Container>
       <Content>
-        <ContentSubheder>{UXUIData.UXUI.content}</ContentSubheder> <br />
-        <ContentSubheder>{UXUIData.UXUI.content2}</ContentSubheder> <br />
-        <ContentSubheder>{UXUIData.UXUI.content3}</ContentSubheder> <br />
-        <ContentSubheder>{UXUIData.UXUI.content4}</ContentSubheder> <br />
-        <li className='md:text-base'>{UXUIData.UXUI.services1}</li>
-        <li className='md:text-base'>{UXUIData.UXUI.services2}</li>
+        <ContentSubheder>{UXUIData.UXUI.content}</ContentSubheder> 
+        <ContentSubheder>{UXUIData.UXUI.content2}</ContentSubheder> 
+        <ContentSubheder>{UXUIData.UXUI.content3}</ContentSubheder> 
+        <ContentSubheder>{UXUIData.UXUI.content4}</ContentSubheder> 
+        <ContentSubheder>{UXUIData.UXUI.content5}</ContentSubheder> 
+        {/* <li className='md:text-base'>{UXUIData.UXUI.services1}</li> */}
+        {/* <li className='md:text-base'>{UXUIData.UXUI.services2}</li> */}
         <li className='md:text-base'>{UXUIData.UXUI.services3}</li>
         <li className='md:text-base'>{UXUIData.UXUI.services4}</li>
         <li className='md:text-base'>{UXUIData.UXUI.services5}</li>

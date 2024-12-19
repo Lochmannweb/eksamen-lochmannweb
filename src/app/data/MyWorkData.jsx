@@ -5,7 +5,7 @@ export const MyWorkHeader = {
     header: "From idea to the finish product",
     subheader: "I help startups and businesses design and develop modern, user-friendly websites, whether starting from scratch or through a complete redesign, ensuring they align perfectly with your goals and vision.",
     content1: "I am available to assist both startups and larger companies with brand development, redesigns, or custom-built websites from scratch.",
-    content2: "With over two years of experience as a developer, my expertise includes JavaScript, Tailwind CSS, CSS, and React.jsx.",
+    content2: "With over two years of experience as a developer, my expertise includes JavaScript, Tailwind CSS, CSS, and React/Next",
     content3: "Additionally, I have experience working with HTML, Astro, and Typescript.",
 }
 
@@ -14,7 +14,7 @@ export const StepByStep = {
     title: "Step-by-Step Proces",
     contact: {
         title: "1. First contact & requirements collection",
-        content: "We start with a conversation to understand the user's needs and vision.",
+        content: "We start with a free conversation to understand the you'r needs and vision.",
     },
     tilbudKontrakt: {
         title: "2. Offer & contract",
@@ -34,7 +34,7 @@ export const StepByStep = {
     },
     vedligeholdelse: {
         title: "6. Maintenance & support",
-        content: "Based on the contract, I ensure that the website meets the customer's requirements, if it is not to be updated continuously, if it is to be updated continuously, updates will work optimally.",
+        content: "Based on the contract, I ensure that the website meets you'r requirements, if it is not to be updated continuously. If it is to be updated continuously, updates will work optimally.",
     },
     button: "Let's get started",
 }

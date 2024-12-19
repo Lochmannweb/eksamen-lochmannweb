@@ -17,7 +17,7 @@ const Content = styled.div({
   gap: '0rem',
   textAlign: 'center',
   marginTop: '-5rem',
-  paddingBottom: '5rem',
+  paddingBottom: '2rem',
 
   // text animation
   color: 'hsl(0 0% 100% / 0)',
@@ -49,7 +49,7 @@ const Aboutpage = () => {
       <Content>
         {MyWorkHeader.content1} 
         {MyWorkHeader.content2} 
-        {MyWorkHeader.content3} 
+        {/* {MyWorkHeader.content3}  */}
       </Content>
      )}
 
@@ -57,7 +57,7 @@ const Aboutpage = () => {
       <Content>
         {MyWorkHeader.content1} <br /> <br />
         {MyWorkHeader.content2} <br /> <br />
-        {MyWorkHeader.content3} 
+        {/* {MyWorkHeader.content3}  */}
       </Content>
      )}
     </>

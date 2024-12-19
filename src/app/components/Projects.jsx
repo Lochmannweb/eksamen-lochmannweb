@@ -66,11 +66,19 @@ const ImageGrid = styled.div({
   display: 'grid',
   gap: '1rem',
   justifyContent: 'center',
-  [`@media (min-width: ${breakpoints.lg})`]: {
+  [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
     gap: '1rem',
     marginBottom: '3rem',
     marginTop: '-2rem',
+    width: '45%',
+    justifySelf: 'center',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    // display: 'flex',
+    // gap: '1rem',
+    // marginBottom: '3rem',
+    // marginTop: '-2rem',
   },
 });
 
@@ -94,7 +102,7 @@ const Button = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     padding: '0.5rem',
     fontSize: '20px',
-    width: '60%',
+    width: '40%',
     marginTop: '2rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {

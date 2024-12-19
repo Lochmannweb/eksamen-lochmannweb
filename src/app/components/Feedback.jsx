@@ -13,7 +13,7 @@ const breakpoints = {
     textAlign: 'center',
     marginTop: '3rem',
     [`@media (min-width: ${breakpoints.md})`]: {
-      padding: '4rem',
+      paddingTop: '4rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       padding: '5rem',
@@ -68,10 +68,10 @@ const breakpoints = {
     gap: '3rem',
     marginTop: '3rem',
     [`@media (min-width: ${breakpoints.md})`]: {
+      display: 'flex',
       justifySelf: 'center',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      display: 'flex',
       justifyContent: 'center',
       gap: '10rem',
     },

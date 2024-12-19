@@ -51,9 +51,9 @@ const Container = styled.div({
   margin: 'auto',
     [`@media (min-width: ${breakpoints.md})`]: {
       display: 'flex',
-      justifyContent: 'center',
+      justifyContent: 'start',
       marginTop: '3rem',
-      width: '80%',
+      width: '84%',
       [`@media (min-width: ${breakpoints.lg})`]: {
         marginTop: '3rem',
         width: '100%',
@@ -102,7 +102,9 @@ const MyStory = () => {
     <Title>{UXUIData.Kode.title}</Title>
     <Container>
       <Content>
-        <ContentSubheder>{UXUIData.Kode.content}</ContentSubheder> <br />
+        <ContentSubheder>{UXUIData.Kode.content}</ContentSubheder>
+        <ContentSubheder>{UXUIData.Kode.content2}</ContentSubheder> 
+        <ContentSubheder>{UXUIData.Kode.content7}</ContentSubheder> 
         <li className='md:text-base'>{UXUIData.Kode.services1}</li>
         <li className='md:text-base'>{UXUIData.Kode.services2}</li>
         <li className='md:text-base'>{UXUIData.Kode.services3}</li>
