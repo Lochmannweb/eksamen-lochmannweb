@@ -61,9 +61,12 @@ const ImageGrid = styled.div({
   display: 'grid',
   gap: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    marginBottom: '5rem',
     display: 'flex',
-    width: '80%'
+    gap: '1rem',
+    marginBottom: '3rem',
+    marginTop: '2rem',
+    width: '45%',
+    justifySelf: 'center',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     marginBottom: '5rem',
