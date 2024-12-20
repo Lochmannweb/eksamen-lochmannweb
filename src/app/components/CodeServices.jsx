@@ -56,7 +56,7 @@ const Container = styled.div({
       width: '84%',
       [`@media (min-width: ${breakpoints.lg})`]: {
         marginTop: '3rem',
-        width: '100%',
+        width: '50%',
         gap: '2rem',
       },
     },
